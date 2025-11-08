@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "Added AFK checker",
+    "Changelog": "- Added performance improvement: polling now stops when AFK and music is not playing.",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/icon.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/image1.png"
@@ -30,6 +30,6 @@
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.1.0/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.1.0/SpotifyHonorific.zip",
     "DownloadCount": 3,
-    "LastUpdate": null
+    "LastUpdate": 1762638841
   }
 ]
