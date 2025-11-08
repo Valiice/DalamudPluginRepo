@@ -42,7 +42,7 @@ jobs:
               if not iso_str:
                   return None
               try:
-                  dt = datetime.strptime(iso_str, "%Y-m-%dT%H:%M:%SZ")
+                  dt = datetime.strptime(iso_str, "%Y-%m-%dT%H:%M:%SZ")
                   return int(dt.timestamp())
               except Exception:
                   return None
@@ -65,6 +65,7 @@ jobs:
               latest_url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
               print(f"Fetching latest release for {plugin.get('InternalName')} ({latest_url})")
               
+              latest_release = None
               try:
                 resp_latest = requests.get(latest_url)
                 resp_latest.raise_for_status()
@@ -85,11 +86,15 @@ jobs:
                         plugin["DownloadLinkInstall"] = new_download_url
                         plugin["DownloadLinkUpdate"] = new_download_url
                         plugin["DownloadLinkTesting"] = new_download_url
-                        # Changelog is pulled from the release body. If body is empty, it uses the default.
-                        plugin["Changelog"] = latest_release.get("body", "No changelog provided.")
                         updated = True
                     else:
                         print(f"  > Version {new_version} is already up-to-date.")
+                    
+                    new_changelog = latest_release.get("body", "No changelog provided.")
+                    if plugin.get("Changelog") != new_changelog:
+                        print(f"  > Updating changelog.")
+                        plugin["Changelog"] = new_changelog
+                        updated = True
                 
                 else:
                     print(f"  > Could not find new version or zip asset for {plugin.get('InternalName')}")
@@ -118,10 +123,14 @@ jobs:
                    plugin["DownloadCount"] = total_downloads
                    updated = True
                 
-                last_updated_iso = max(
-                    (r.get("published_at") for r in all_releases if r.get("published_at")),
-                    default=None
-                )
+                all_dates = []
+                for r in all_releases:
+                    if r.get("published_at"):
+                        all_dates.append(r.get("published_at"))
+                    elif r.get("created_at"):
+                        all_dates.append(r.get("created_at"))
+                
+                last_updated_iso = max(all_dates, default=None)
                 last_updated_unix = to_unix_timestamp(last_updated_iso)
 
                 if plugin.get("LastUpdate") != last_updated_unix:
