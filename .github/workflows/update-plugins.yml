@@ -25,6 +25,7 @@ jobs:
 
       - name: Update repo.json
         run: |
+          python3 <<'EOF'
           import json, re, requests, time
           from datetime import datetime
 
