@@ -42,7 +42,7 @@ jobs:
               if not iso_str:
                   return None
               try:
-                  dt = datetime.strptime(iso_str, "%Y-m-dT%H:%M:%SZ")
+                  dt = datetime.strptime(iso_str, "%Y-m-%dT%H:%M:%SZ")
                   return int(dt.timestamp())
               except Exception:
                   return None
@@ -62,7 +62,6 @@ jobs:
                   print(f"Skipping {plugin.get('InternalName')} - invalid RepoUrl: {repo_url}")
                   continue
 
-              # --- Get Latest Release Info (for Version and Download Links) ---
               latest_url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
               print(f"Fetching latest release for {plugin.get('InternalName')} ({latest_url})")
               
@@ -73,7 +72,6 @@ jobs:
                 
                 new_version = latest_release.get("tag_name", "").lstrip("v")
                 
-                # Find the 'zip' asset
                 new_download_url = None
                 for asset in latest_release.get("assets", []):
                     if asset.get("name", "").endswith(".zip"):
@@ -87,7 +85,7 @@ jobs:
                         plugin["DownloadLinkInstall"] = new_download_url
                         plugin["DownloadLinkUpdate"] = new_download_url
                         plugin["DownloadLinkTesting"] = new_download_url
-                        plugin["LastUpdate"] = to_unix_timestamp(latest_release.get("published_at"))
+                        # Changelog is pulled from the release body. If body is empty, it uses the default.
                         plugin["Changelog"] = latest_release.get("body", "No changelog provided.")
                         updated = True
                     else:
@@ -100,15 +98,14 @@ jobs:
                 print(f"  > Failed to fetch latest release: {e}")
 
 
-              # --- Get All Releases (for Download Count) ---
               all_releases_url = f"https://api.github.com/repos/{owner}/{repo}/releases?per_page=100"
-              print(f"Fetching all releases for download count ({all_releases_url})")
+              print(f"Fetching all releases for stats ({all_releases_url})")
               
               try:
                 resp_all = requests.get(all_releases_url)
                 resp_all.raise_for_status()
                 all_releases = resp_all.json()
-                
+
                 total_downloads = sum(
                     a.get("download_count", 0)
                     for r in all_releases
@@ -120,20 +117,31 @@ jobs:
                    print(f"  > Updating download count: {total_downloads}")
                    plugin["DownloadCount"] = total_downloads
                    updated = True
+                
+                last_updated_iso = max(
+                    (r.get("published_at") for r in all_releases if r.get("published_at")),
+                    default=None
+                )
+                last_updated_unix = to_unix_timestamp(last_updated_iso)
+
+                if plugin.get("LastUpdate") != last_updated_unix:
+                    print(f"  > Updating last update time: {last_updated_unix}")
+                    plugin["LastUpdate"] = last_updated_unix
+                    updated = True
 
               except requests.exceptions.RequestException as e:
                  print(f"  > Failed to fetch all releases: {e}")
 
-              # Small delay to avoid rate limiting
               time.sleep(1)
 
 
           if updated:
               print("Updates found. Writing to repo.json.")
-              with open(REPO_FILE, "w") as f:
+              with open(REPO_FILE, "w") in f:
                   json.dump(plugins, f, indent=2)
           else:
               print("No updates to apply.")
+          EOF
 
       - name: Commit
         run: |
