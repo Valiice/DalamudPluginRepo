@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "",
+    "Changelog": "Added AFK checker",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/icon.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/image1.png"
