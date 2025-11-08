@@ -137,7 +137,7 @@ jobs:
 
           if updated:
               print("Updates found. Writing to repo.json.")
-              with open(REPO_FILE, "w") in f:
+              with open(REPO_FILE, "w") as f:
                   json.dump(plugins, f, indent=2)
           else:
               print("No updates to apply.")
