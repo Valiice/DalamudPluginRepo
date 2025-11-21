@@ -31,5 +31,35 @@
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.2.0/SpotifyHonorific.zip",
     "DownloadCount": 4,
     "LastUpdate": 1762644265 
+  },
+  {
+    "Author": "Vali",
+    "Name": "Drop Rate Logger",
+    "InternalName": "DropLogger",
+    "AssemblyVersion": "0.0.0.0",
+    "Description": "Loot Tracking System. Logs drops to server.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Valiice/LootTracker",
+    "Tags": [
+      "loot",
+      "tracker"
+    ],
+    "DalamudApiLevel": 13,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": true,
+    "LoadPriority": 0,
+    "Punchline": "Logs drops to server",
+    "Changelog": "",
+    "IconUrl": "",
+    "ImageUrls": [],
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "",
+    "DownloadLinkUpdate": "",
+    "DownloadCount": 0,
+    "LastUpdate": 0
   }
 ]
