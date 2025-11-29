@@ -61,5 +61,36 @@
     "DownloadLinkUpdate": "https://github.com/Valiice/LootTracker/releases/download/v1.0.0/DropLogger.zip",
     "DownloadCount": 2,
     "LastUpdate": 1763714462
+  },
+  {
+    "Author": "Vali",
+    "Name": "Discord Chat Webhook",
+    "InternalName": "DiscordChatWebhook",
+    "AssemblyVersion": "1.0.0",
+    "Description": "Relays chat to Discord via Webhook.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Valiice/DiscordChatWebhook",
+    "Tags": [
+      "discord",
+      "webhook",
+      "chat"
+    ],
+    "DalamudApiLevel": 13,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": true,
+    "LoadPriority": 0,
+    "Punchline": "Simple, lightweight relay of game chat to Discord via Webhook.",
+    "Changelog": "- Initial release",
+    "IconUrl": "",
+    "ImageUrls": [],
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.0/DiscordChatWebhook.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.0/DiscordChatWebhook.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.0/DiscordChatWebhook.zip",
+    "DownloadCount": 0,
+    "LastUpdate": 0
   }
 ]
