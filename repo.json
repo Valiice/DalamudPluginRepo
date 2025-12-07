@@ -29,7 +29,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.1/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.1/SpotifyHonorific.zip",
-    "DownloadCount": 15,
+    "DownloadCount": 18,
     "LastUpdate": 1765074341
   },
   {
@@ -90,14 +90,14 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.0/DiscordChatWebhook.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.0/DiscordChatWebhook.zip",
-    "DownloadCount": 2,
-    "LastUpdate": 1764474422
+    "DownloadCount": 1,
+    "LastUpdate": 1765077569
   },
   {
     "Author": "Vali",
     "Name": "Job Auto Switcher",
     "InternalName": "JobAutoSwitcher",
-    "AssemblyVersion": "1.0.0",
+    "AssemblyVersion": "1.0.1",
     "Description": "Automatically switches your gearset to match the queued job when you click Commence, bypassing the 'class/job is different' error.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/JobAutoSwitcher",
@@ -113,16 +113,16 @@
     "CanUnloadAsync": true,
     "LoadPriority": 0,
     "Punchline": "Never miss a queue pop because of the wrong job again.",
-    "Changelog": "Initial version for the project",
+    "Changelog": "",
     "IconUrl": "",
     "ImageUrls": [],
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.0/JobAutoSwitcher.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.1/JobAutoSwitcher.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.0/JobAutoSwitcher.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.0/JobAutoSwitcher.zip",
-    "DownloadCount": 1,
-    "LastUpdate": 1765071706
+    "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.1/JobAutoSwitcher.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.1/JobAutoSwitcher.zip",
+    "DownloadCount": 2,
+    "LastUpdate": 1765080678
   }
 ]
