@@ -27,12 +27,12 @@ jobs:
         run: pip install requests
 
       - name: Update repo.json
-        # The GITHUB_TOKEN is now available as an environment variable in this step
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 <<'EOF'
           import json, re, requests, time, os
+          from datetime import datetime
 
           GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
           HEADERS = {}
@@ -107,7 +107,7 @@ jobs:
                     print(f"  > Could not find new version or zip asset for {plugin.get('InternalName')}")
 
               except requests.exceptions.RequestException as e:
-                print(f"  > Failed to fetch latest release: {e}")
+                print(f"  > Failed to fetch latest release (Version/Changelog): {e}")
 
 
               all_releases_url = f"https://api.github.com/repos/{owner}/{repo}/releases?per_page=100"
@@ -140,13 +140,16 @@ jobs:
                 last_updated_iso = max(all_dates, default=None)
                 last_updated_unix = to_unix_timestamp(last_updated_iso)
 
-                if plugin.get("LastUpdate") != last_updated_unix:
-                    print(f"  > Updating last update time: {last_updated_unix}")
-                    plugin["LastUpdate"] = last_updated_unix
-                    updated = True
+                if last_updated_unix is not None:
+                    if plugin.get("LastUpdate") != last_updated_unix:
+                        print(f"  > Updating last update time: {last_updated_unix}")
+                        plugin["LastUpdate"] = last_updated_unix
+                        updated = True
+                else:
+                    print("  > Could not determine LastUpdate date (no published releases found, retaining old value).")
 
               except requests.exceptions.RequestException as e:
-                 print(f"  > Failed to fetch all releases: {e}")
+                 print(f"  > Failed to fetch all releases (Download/Update Time): {e}")
 
               time.sleep(1)
 
@@ -156,7 +159,7 @@ jobs:
               with open(REPO_FILE, "w") as f:
                   json.dump(plugins, f, indent=2)
           else:
-              print("No updates to apply.")
+              print("No changes to apply.")
           EOF
 
       - name: Commit
