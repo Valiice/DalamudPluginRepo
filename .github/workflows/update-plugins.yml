@@ -27,10 +27,17 @@ jobs:
         run: pip install requests
 
       - name: Update repo.json
+        # The GITHUB_TOKEN is now available as an environment variable in this step
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           python3 <<'EOF'
-          import json, re, requests, time
-          from datetime import datetime
+          import json, re, requests, time, os
+
+          GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
+          HEADERS = {}
+          if GITHUB_TOKEN:
+              HEADERS['Authorization'] = f"token {GITHUB_TOKEN}"
 
           REPO_FILE = "repo.json"
 
@@ -67,7 +74,7 @@ jobs:
               
               latest_release = None
               try:
-                resp_latest = requests.get(latest_url)
+                resp_latest = requests.get(latest_url, headers=HEADERS)
                 resp_latest.raise_for_status()
                 latest_release = resp_latest.json()
                 
@@ -107,7 +114,7 @@ jobs:
               print(f"Fetching all releases for stats ({all_releases_url})")
               
               try:
-                resp_all = requests.get(all_releases_url)
+                resp_all = requests.get(all_releases_url, headers=HEADERS)
                 resp_all.raise_for_status()
                 all_releases = resp_all.json()
 
