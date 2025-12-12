@@ -3,7 +3,9 @@
 This is a custom plugin repository for **Dalamud**, the plugin framework for Final Fantasy XIV. It contains a collection of quality-of-life and utility plugins.
 
 ## Available Plugins
+START_MARKER
 
+END_MARKER
 ---
 
 ## Installation

@@ -41,8 +41,9 @@ jobs:
 
           REPO_FILE = "repo.json"
           README_FILE = "README.md"
-          START_MARKER = ""
-          END_MARKER = ""
+          
+          START_MARKER = "START_MARKER"
+          END_MARKER = "END_MARKER"
 
           def get_owner_repo(url):
               if not url: return (None, None)
@@ -102,10 +103,11 @@ jobs:
               end_idx = content.find(END_MARKER)
 
               if start_idx == -1 or end_idx == -1:
-                  print("Markers not found in README.md. Please ensure and exist.")
+                  print("Markers not found in README.md. Please ensure START_MARKER and END_MARKER exist.")
                   return False
               
               pre_content = content[:start_idx + len(START_MARKER)]
+              
               post_content = content[end_idx:]
               
               new_content = f"{pre_content}\n{table_content}\n{post_content}"
