@@ -4,7 +4,12 @@ This is a custom plugin repository for **Dalamud**, the plugin framework for Fin
 
 ## Available Plugins
 START_MARKER
-
+| Plugin Name | Description | Source |
+| :--- | :--- | :---: |
+| **SpotifyHonorific** | **Your Spotify song as an honorific**<br>Update honorific title based on your currently playing Spotify track | [Repo](https://github.com/Valiice/SpotifyHonorific) |
+| **Drop Rate Logger** | **Logs drops to server**<br>Loot Tracking System. Logs drops to server. | [Repo](https://github.com/Valiice/LootTracker) |
+| **Discord Chat Webhook** | **Simple, lightweight relay of game chat to Discord via Webhook.**<br>Relays chat to Discord via Webhook. | [Repo](https://github.com/Valiice/DiscordChatWebhook) |
+| **Job Auto Switcher** | **Never miss a queue pop because of the wrong job again.**<br>Automatically switches your gearset to match the queued job when you click Commence, bypassing the 'class/job is different' error. | [Repo](https://github.com/Valiice/JobAutoSwitcher) |
 END_MARKER
 ---
 
