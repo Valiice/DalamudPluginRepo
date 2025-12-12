@@ -60,19 +60,69 @@ jobs:
           updated = False
           for plugin in plugins:
               repo_url = plugin.get("RepoUrl")
-              if not repo_url:
-                  print(f"Skipping {plugin.get('InternalName')} - no RepoUrl")
+              internal_name = plugin.get("InternalName")
+              
+              if not repo_url or not internal_name:
+                  print(f"Skipping {internal_name} - missing RepoUrl or InternalName")
                   continue
 
               owner, repo = get_owner_repo(repo_url)
               if not owner or not repo:
-                  print(f"Skipping {plugin.get('InternalName')} - invalid RepoUrl: {repo_url}")
+                  print(f"Skipping {internal_name} - invalid RepoUrl: {repo_url}")
                   continue
 
+              manifest_candidates = [
+                  f"https://raw.githubusercontent.com/{owner}/{repo}/main/{internal_name}.json",
+                  f"https://raw.githubusercontent.com/{owner}/{repo}/master/{internal_name}.json",
+                  f"https://raw.githubusercontent.com/{owner}/{repo}/main/{internal_name}/{internal_name}.json",
+                  f"https://raw.githubusercontent.com/{owner}/{repo}/master/{internal_name}/{internal_name}.json"
+              ]
+
+              manifest_data = None
+              for url in manifest_candidates:
+                  try:
+                      r = requests.get(url)
+                      if r.status_code == 200:
+                          manifest_data = r.json()
+                          print(f"  > Found source manifest at {url}")
+                          break
+                  except:
+                      continue
+
+              if manifest_data:
+                  # Sync IconUrl
+                  if manifest_data.get("IconUrl") and manifest_data.get("IconUrl") != plugin.get("IconUrl"):
+                      print(f"  > Updating IconUrl for {internal_name}")
+                      plugin["IconUrl"] = manifest_data["IconUrl"]
+                      updated = True
+                  
+                  # Sync ImageUrls
+                  if manifest_data.get("ImageUrls") and manifest_data.get("ImageUrls") != plugin.get("ImageUrls"):
+                      print(f"  > Updating ImageUrls for {internal_name}")
+                      plugin["ImageUrls"] = manifest_data["ImageUrls"]
+                      updated = True
+                  
+                  # Sync Punchline
+                  if manifest_data.get("Punchline") and manifest_data.get("Punchline") != plugin.get("Punchline"):
+                      print(f"  > Updating Punchline for {internal_name}")
+                      plugin["Punchline"] = manifest_data["Punchline"]
+                      updated = True
+                      
+                  # Sync Description
+                  if manifest_data.get("Description") and manifest_data.get("Description") != plugin.get("Description"):
+                      print(f"  > Updating Description for {internal_name}")
+                      plugin["Description"] = manifest_data["Description"]
+                      updated = True
+
+                  # Sync Tags
+                  if manifest_data.get("Tags") and manifest_data.get("Tags") != plugin.get("Tags"):
+                      print(f"  > Updating Tags for {internal_name}")
+                      plugin["Tags"] = manifest_data["Tags"]
+                      updated = True
+
               latest_url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
-              print(f"Fetching latest release for {plugin.get('InternalName')} ({latest_url})")
+              print(f"Fetching latest release for {internal_name} ({latest_url})")
               
-              latest_release = None
               try:
                 resp_latest = requests.get(latest_url, headers=HEADERS)
                 resp_latest.raise_for_status()
@@ -94,24 +144,16 @@ jobs:
                         plugin["DownloadLinkUpdate"] = new_download_url
                         plugin["DownloadLinkTesting"] = new_download_url
                         updated = True
-                    else:
-                        print(f"  > Version {new_version} is already up-to-date.")
                     
                     new_changelog = latest_release.get("body", "No changelog provided.")
                     if plugin.get("Changelog") != new_changelog:
-                        print(f"  > Updating changelog.")
                         plugin["Changelog"] = new_changelog
                         updated = True
                 
-                else:
-                    print(f"  > Could not find new version or zip asset for {plugin.get('InternalName')}")
-
               except requests.exceptions.RequestException as e:
-                print(f"  > Failed to fetch latest release (Version/Changelog): {e}")
-
+                print(f"  > Failed to fetch latest release: {e}")
 
               all_releases_url = f"https://api.github.com/repos/{owner}/{repo}/releases?per_page=100"
-              print(f"Fetching all releases for stats ({all_releases_url})")
               
               try:
                 resp_all = requests.get(all_releases_url, headers=HEADERS)
@@ -126,7 +168,6 @@ jobs:
                 )
                 
                 if plugin.get("DownloadCount") != total_downloads:
-                   print(f"  > Updating download count: {total_downloads}")
                    plugin["DownloadCount"] = total_downloads
                    updated = True
                 
@@ -142,17 +183,13 @@ jobs:
 
                 if last_updated_unix is not None:
                     if plugin.get("LastUpdate") != last_updated_unix:
-                        print(f"  > Updating last update time: {last_updated_unix}")
                         plugin["LastUpdate"] = last_updated_unix
                         updated = True
-                else:
-                    print("  > Could not determine LastUpdate date (no published releases found, retaining old value).")
 
               except requests.exceptions.RequestException as e:
-                 print(f"  > Failed to fetch all releases (Download/Update Time): {e}")
+                 print(f"  > Failed to fetch all releases: {e}")
 
               time.sleep(1)
-
 
           if updated:
               print("Updates found. Writing to repo.json.")
