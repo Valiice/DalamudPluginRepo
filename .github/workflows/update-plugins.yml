@@ -50,13 +50,19 @@ jobs:
               m = re.search("github\\.com/([^/]+)/([^/]+)", url.strip("/"))
               return m.groups() if m else (None, None)
 
+          def to_unix_timestamp(iso_str):
+              if not iso_str: return None
+              try:
+                  dt = datetime.strptime(iso_str, "%Y-%m-%dT%H:%M:%SZ")
+                  return int(dt.timestamp())
+              except Exception:
+                  return None
+
           def verify_and_fix_url(url, preferred_branch):
               if not url: return url
               try:
-                  if requests.head(url).status_code == 200:
-                      return url
-              except:
-                  pass
+                  if requests.head(url).status_code == 200: return url
+              except: pass
               
               new_url = url
               if preferred_branch == "master" and "/main/" in url:
@@ -66,10 +72,8 @@ jobs:
               
               if new_url != url:
                   try:
-                      if requests.head(new_url).status_code == 200:
-                          return new_url
-                  except:
-                      pass
+                      if requests.head(new_url).status_code == 200: return new_url
+                  except: pass
               return url
 
           def update_readme(plugins_list):
@@ -85,37 +89,28 @@ jobs:
                   punch = p.get("Punchline", "")
                   url = p.get("RepoUrl", "")
                   
-                  if punch:
-                      full_desc = f"**{punch}**<br>{desc}"
-                  else:
-                      full_desc = desc
+                  if punch: full_desc = f"**{punch}**<br>{desc}"
+                  else: full_desc = desc
                   
                   full_desc = full_desc.replace("\n", " ").replace("|", "-")
-                  
                   lines.append(f"| **{name}** | {full_desc} | [Repo]({url}) |")
               
               table_content = "\n".join(lines)
               
-              with open(README_FILE, "r") as f:
-                  content = f.read()
+              with open(README_FILE, "r") as f: content = f.read()
 
               start_idx = content.find(START_MARKER)
               end_idx = content.find(END_MARKER)
 
               if start_idx == -1 or end_idx == -1:
-                  print("Markers not found in README.md. Please ensure START_MARKER and END_MARKER exist.")
+                  print("Markers not found in README.md.")
                   return False
               
-              pre_content = content[:start_idx + len(START_MARKER)]
-              
-              post_content = content[end_idx:]
-              
-              new_content = f"{pre_content}\n{table_content}\n{post_content}"
+              new_content = f"{content[:start_idx + len(START_MARKER)]}\n{table_content}\n{content[end_idx:]}"
 
               if new_content != content:
-                  with open(README_FILE, "w") as f:
-                      f.write(new_content)
-                  print("README.md updated with new plugin list.")
+                  with open(README_FILE, "w") as f: f.write(new_content)
+                  print("README.md updated.")
                   return True
               return False
 
@@ -129,12 +124,10 @@ jobs:
               repo_url = plugin.get("RepoUrl")
               internal_name = plugin.get("InternalName")
               
-              if not repo_url or not internal_name:
-                  continue
+              if not repo_url or not internal_name: continue
 
               owner, repo = get_owner_repo(repo_url)
-              if not owner or not repo:
-                  continue
+              if not owner or not repo: continue
 
               manifest_candidates = [
                   (f"https://raw.githubusercontent.com/{owner}/{repo}/master/{internal_name}.json", "master"),
@@ -152,10 +145,9 @@ jobs:
                       if r.status_code == 200:
                           manifest_data = r.json()
                           detected_branch = branch
-                          print(f"  > Found manifest for {internal_name} ({branch})")
+                          print(f" > Found manifest for {internal_name}")
                           break
-                  except:
-                      continue
+                  except: continue
 
               if manifest_data:
                   for field in ["Punchline", "Description", "Tags", "Name"]:
@@ -182,11 +174,10 @@ jobs:
                   if resp.status_code == 200:
                       rel = resp.json()
                       ver = rel.get("tag_name", "").lstrip("v")
-                      
                       dl_link = next((a["browser_download_url"] for a in rel.get("assets", []) if a["name"].endswith(".zip")), None)
 
                       if ver and dl_link and plugin.get("AssemblyVersion") != ver:
-                          print(f"  > New version {ver} for {internal_name}")
+                          print(f" > New version {ver} for {internal_name}")
                           plugin["AssemblyVersion"] = ver
                           plugin["DownloadLinkInstall"] = dl_link
                           plugin["DownloadLinkUpdate"] = dl_link
@@ -194,8 +185,38 @@ jobs:
                           plugin["Changelog"] = rel.get("body", "")
                           updated = True
               except Exception as e:
-                  print(f"  > Error fetching release for {internal_name}: {e}")
+                  print(f" > Error fetching latest release: {e}")
               
+              all_releases_url = f"https://api.github.com/repos/{owner}/{repo}/releases?per_page=100"
+              try:
+                  resp_all = requests.get(all_releases_url, headers=HEADERS)
+                  if resp_all.status_code == 200:
+                      all_releases = resp_all.json()
+
+                      total_downloads = sum(
+                          a.get("download_count", 0)
+                          for r in all_releases
+                          for a in r.get("assets", [])
+                          if a.get("name", "").endswith(".zip")
+                      )
+                      if plugin.get("DownloadCount") != total_downloads:
+                          plugin["DownloadCount"] = total_downloads
+                          updated = True
+
+                      all_dates = []
+                      for r in all_releases:
+                          if r.get("published_at"): all_dates.append(r.get("published_at"))
+                          elif r.get("created_at"): all_dates.append(r.get("created_at"))
+                      
+                      last_updated_iso = max(all_dates, default=None)
+                      last_updated_unix = to_unix_timestamp(last_updated_iso)
+
+                      if last_updated_unix is not None and plugin.get("LastUpdate") != last_updated_unix:
+                          plugin["LastUpdate"] = last_updated_unix
+                          updated = True
+              except Exception as e:
+                  print(f" > Error fetching stats: {e}")
+
               time.sleep(1)
 
           if updated:
