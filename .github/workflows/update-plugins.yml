@@ -54,6 +54,31 @@ jobs:
               except Exception:
                   return None
 
+          def verify_and_fix_url(url, preferred_branch):
+              if not url: return url
+              
+              try:
+                  if requests.head(url).status_code == 200:
+                      return url
+              except:
+                  pass
+              
+              new_url = url
+              if preferred_branch == "master" and "/main/" in url:
+                  new_url = url.replace("/main/", "/master/")
+              elif preferred_branch == "main" and "/master/" in url:
+                  new_url = url.replace("/master/", "/main/")
+              
+              if new_url != url:
+                  try:
+                      if requests.head(new_url).status_code == 200:
+                          print(f"    (Auto-fixed broken URL: {new_url})")
+                          return new_url
+                  except:
+                      pass
+
+              return url
+
           with open(REPO_FILE, "r") as f:
               plugins = json.load(f)
 
@@ -72,56 +97,53 @@ jobs:
                   continue
 
               manifest_candidates = [
-                  f"https://raw.githubusercontent.com/{owner}/{repo}/main/{internal_name}.json",
-                  f"https://raw.githubusercontent.com/{owner}/{repo}/master/{internal_name}.json",
-                  f"https://raw.githubusercontent.com/{owner}/{repo}/main/{internal_name}/{internal_name}.json",
-                  f"https://raw.githubusercontent.com/{owner}/{repo}/master/{internal_name}/{internal_name}.json"
+                  (f"https://raw.githubusercontent.com/{owner}/{repo}/master/{internal_name}.json", "master"),
+                  (f"https://raw.githubusercontent.com/{owner}/{repo}/main/{internal_name}.json", "main"),
+                  (f"https://raw.githubusercontent.com/{owner}/{repo}/master/{internal_name}/{internal_name}.json", "master"),
+                  (f"https://raw.githubusercontent.com/{owner}/{repo}/main/{internal_name}/{internal_name}.json", "main")
               ]
 
               manifest_data = None
-              for url in manifest_candidates:
+              detected_branch = "master" # Default fallback
+
+              for url, branch in manifest_candidates:
                   try:
                       r = requests.get(url)
                       if r.status_code == 200:
                           manifest_data = r.json()
-                          print(f"  > Found source manifest at {url}")
+                          detected_branch = branch
+                          print(f"  > Found source manifest for {internal_name} on branch '{branch}'")
                           break
                   except:
                       continue
 
               if manifest_data:
-                  # Sync IconUrl
-                  if manifest_data.get("IconUrl") and manifest_data.get("IconUrl") != plugin.get("IconUrl"):
-                      print(f"  > Updating IconUrl for {internal_name}")
-                      plugin["IconUrl"] = manifest_data["IconUrl"]
+                  raw_icon = manifest_data.get("IconUrl")
+                  if raw_icon:
+                      fixed_icon = verify_and_fix_url(raw_icon, detected_branch)
+                      if fixed_icon != plugin.get("IconUrl"):
+                          print(f"  > Updating IconUrl")
+                          plugin["IconUrl"] = fixed_icon
+                          updated = True
+                  
+                  raw_images = manifest_data.get("ImageUrls", [])
+                  fixed_images = []
+                  for img in raw_images:
+                      fixed_images.append(verify_and_fix_url(img, detected_branch))
+                  
+                  if fixed_images != plugin.get("ImageUrls"):
+                      print(f"  > Updating ImageUrls")
+                      plugin["ImageUrls"] = fixed_images
                       updated = True
                   
-                  # Sync ImageUrls
-                  if manifest_data.get("ImageUrls") and manifest_data.get("ImageUrls") != plugin.get("ImageUrls"):
-                      print(f"  > Updating ImageUrls for {internal_name}")
-                      plugin["ImageUrls"] = manifest_data["ImageUrls"]
-                      updated = True
-                  
-                  # Sync Punchline
-                  if manifest_data.get("Punchline") and manifest_data.get("Punchline") != plugin.get("Punchline"):
-                      print(f"  > Updating Punchline for {internal_name}")
-                      plugin["Punchline"] = manifest_data["Punchline"]
-                      updated = True
-                      
-                  # Sync Description
-                  if manifest_data.get("Description") and manifest_data.get("Description") != plugin.get("Description"):
-                      print(f"  > Updating Description for {internal_name}")
-                      plugin["Description"] = manifest_data["Description"]
-                      updated = True
-
-                  # Sync Tags
-                  if manifest_data.get("Tags") and manifest_data.get("Tags") != plugin.get("Tags"):
-                      print(f"  > Updating Tags for {internal_name}")
-                      plugin["Tags"] = manifest_data["Tags"]
-                      updated = True
+                  for field in ["Punchline", "Description", "Tags"]:
+                      val = manifest_data.get(field)
+                      if val and val != plugin.get(field):
+                          print(f"  > Updating {field}")
+                          plugin[field] = val
+                          updated = True
 
               latest_url = f"https://api.github.com/repos/{owner}/{repo}/releases/latest"
-              print(f"Fetching latest release for {internal_name} ({latest_url})")
               
               try:
                 resp_latest = requests.get(latest_url, headers=HEADERS)
@@ -149,7 +171,7 @@ jobs:
                     if plugin.get("Changelog") != new_changelog:
                         plugin["Changelog"] = new_changelog
                         updated = True
-                
+
               except requests.exceptions.RequestException as e:
                 print(f"  > Failed to fetch latest release: {e}")
 
