@@ -42,8 +42,8 @@ jobs:
           REPO_FILE = "repo.json"
           README_FILE = "README.md"
           
-          START_MARKER = "<START MARKER>"
-          END_MARKER = "<END MARKER>"
+          START_MARKER = "## Available Plugins"
+          END_MARKER = "---"
 
           def get_owner_repo(url):
               if not url: return (None, None)
