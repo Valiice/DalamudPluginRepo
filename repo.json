@@ -4,7 +4,7 @@
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
     "AssemblyVersion": "1.3.2",
-    "Description": "Update honorific title based on your currently playing Spotify track.",
+    "Description": "Update honorific title based on your currently playing Spotify track",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",
     "Tags": [
@@ -19,9 +19,11 @@
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
     "Changelog": "",
-    "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/icon.png",
+    "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/spotify_logo.png",
     "ImageUrls": [
-      "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/image1.png"
+      "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/image1.png",
+      "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/image2.png",
+      "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/image3.png"
     ],
     "AcceptsFeedback": false,
     "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.2/SpotifyHonorific.zip",
@@ -98,7 +100,7 @@
     "Name": "Job Auto Switcher",
     "InternalName": "JobAutoSwitcher",
     "AssemblyVersion": "1.0.2",
-    "Description": "Automatically switches your gearset to match the queued job when you click Commence, bypassing the 'class/job is different' error.",
+    "Description": "Automatically switches to the correct job when clicking Commence on the wrong job.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/JobAutoSwitcher",
     "Tags": [
