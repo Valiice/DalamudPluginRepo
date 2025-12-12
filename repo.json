@@ -3,7 +3,7 @@
     "Author": "Vali",
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
-    "AssemblyVersion": "1.3.1",
+    "AssemblyVersion": "1.3.2",
     "Description": "Update honorific title based on your currently playing Spotify track.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",
@@ -24,13 +24,13 @@
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/main/images/image1.png"
     ],
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.1/SpotifyHonorific.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.2/SpotifyHonorific.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.1/SpotifyHonorific.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.1/SpotifyHonorific.zip",
-    "DownloadCount": 15,
-    "LastUpdate": null
+    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.2/SpotifyHonorific.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.2/SpotifyHonorific.zip",
+    "DownloadCount": 24,
+    "LastUpdate": 1765339805
   },
   {
     "Author": "Vali",
@@ -59,14 +59,14 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/LootTracker/releases/download/v1.0.0/DropLogger.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/LootTracker/releases/download/v1.0.0/DropLogger.zip",
-    "DownloadCount": 2,
-    "LastUpdate": null
+    "DownloadCount": 3,
+    "LastUpdate": 1763714462
   },
   {
     "Author": "Vali",
     "Name": "Discord Chat Webhook",
     "InternalName": "DiscordChatWebhook",
-    "AssemblyVersion": "1.0.0",
+    "AssemblyVersion": "1.0.1",
     "Description": "Relays chat to Discord via Webhook.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/DiscordChatWebhook",
@@ -85,19 +85,19 @@
     "IconUrl": "",
     "ImageUrls": [],
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.0/DiscordChatWebhook.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.1/DiscordChatWebhook.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.0/DiscordChatWebhook.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.0/DiscordChatWebhook.zip",
-    "DownloadCount": 2,
-    "LastUpdate": null
+    "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.1/DiscordChatWebhook.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.0.1/DiscordChatWebhook.zip",
+    "DownloadCount": 4,
+    "LastUpdate": 1765339931
   },
   {
     "Author": "Vali",
     "Name": "Job Auto Switcher",
     "InternalName": "JobAutoSwitcher",
-    "AssemblyVersion": "1.0.0",
+    "AssemblyVersion": "1.0.2",
     "Description": "Automatically switches your gearset to match the queued job when you click Commence, bypassing the 'class/job is different' error.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/JobAutoSwitcher",
@@ -113,16 +113,16 @@
     "CanUnloadAsync": true,
     "LoadPriority": 0,
     "Punchline": "Never miss a queue pop because of the wrong job again.",
-    "Changelog": "Initial version for the project",
+    "Changelog": "",
     "IconUrl": "",
     "ImageUrls": [],
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.0/JobAutoSwitcher.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.2/JobAutoSwitcher.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.0/JobAutoSwitcher.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.0/JobAutoSwitcher.zip",
-    "DownloadCount": 1,
-    "LastUpdate": null
+    "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.2/JobAutoSwitcher.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.0.2/JobAutoSwitcher.zip",
+    "DownloadCount": 12,
+    "LastUpdate": 1765339756
   }
 ]
