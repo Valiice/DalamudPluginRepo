@@ -100,7 +100,7 @@
     "Name": "Job Auto Switcher",
     "InternalName": "JobAutoSwitcher",
     "AssemblyVersion": "1.0.2",
-    "Description": "Automatically switches to the correct job when clicking Commence on the wrong job.",
+    "Description": "Automatically switches your gearset to match the queued job when you click Commence, bypassing the 'class/job is different' error.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/JobAutoSwitcher",
     "Tags": [
