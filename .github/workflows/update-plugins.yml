@@ -41,6 +41,8 @@ jobs:
 
           REPO_FILE = "repo.json"
           README_FILE = "README.md"
+          START_MARKER = ""
+          END_MARKER = ""
 
           def get_owner_repo(url):
               if not url: return (None, None)
@@ -64,7 +66,6 @@ jobs:
               if new_url != url:
                   try:
                       if requests.head(new_url).status_code == 200:
-                          print(f"    (Auto-fixed broken URL: {new_url})")
                           return new_url
                   except:
                       pass
@@ -97,15 +98,17 @@ jobs:
               with open(README_FILE, "r") as f:
                   content = f.read()
 
-              start_marker = ""
-              end_marker = ""
-              pattern = re.compile(f"({re.escape(start_marker)}).*?({re.escape(end_marker)})", re.DOTALL)
-              
-              if start_marker not in content or end_marker not in content:
+              start_idx = content.find(START_MARKER)
+              end_idx = content.find(END_MARKER)
+
+              if start_idx == -1 or end_idx == -1:
                   print("Markers not found in README.md. Please ensure and exist.")
                   return False
-
-              new_content = pattern.sub(f"\\1\n{table_content}\n\\2", content)
+              
+              pre_content = content[:start_idx + len(START_MARKER)]
+              post_content = content[end_idx:]
+              
+              new_content = f"{pre_content}\n{table_content}\n{post_content}"
 
               if new_content != content:
                   with open(README_FILE, "w") as f:
@@ -113,6 +116,7 @@ jobs:
                   print("README.md updated with new plugin list.")
                   return True
               return False
+
 
           with open(REPO_FILE, "r") as f:
               plugins = json.load(f)
