@@ -3,7 +3,7 @@
     "Author": "Vali",
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
-    "AssemblyVersion": "1.3.2",
+    "AssemblyVersion": "1.4.0",
     "Description": "Update honorific title based on your currently playing Spotify track",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",
@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "",
+    "Changelog": "- Update version to use API14",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/spotify_logo.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
@@ -26,13 +26,13 @@
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image3.png"
     ],
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.2/SpotifyHonorific.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.4.0/SpotifyHonorific.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.2/SpotifyHonorific.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.3.2/SpotifyHonorific.zip",
+    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.4.0/SpotifyHonorific.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.4.0/SpotifyHonorific.zip",
     "DownloadCount": 26,
-    "LastUpdate": 1765339805
+    "LastUpdate": 1766094605
   },
   {
     "Author": "Vali",
