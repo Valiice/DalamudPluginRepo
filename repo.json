@@ -116,7 +116,7 @@
     "LoadPriority": 0,
     "Punchline": "Never miss a queue pop because of the wrong job again.",
     "Changelog": "- Update version to use API14",
-    "IconUrl": "",
+    "IconUrl": "https://raw.githubusercontent.com/Valiice/JobAutoSwitcher/master/images/icon.png",
     "ImageUrls": [],
     "AcceptsFeedback": false,
     "DownloadLinkInstall": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.1.0/JobAutoSwitcher.zip",
