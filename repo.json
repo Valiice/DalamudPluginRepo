@@ -131,7 +131,7 @@
     "Author": "Caraxi & Vali",
     "Name": "Simple Tweaks Plugin Friend Fix",
     "InternalName": "SimpleTweaksVali",
-    "AssemblyVersion": "1.0.1.0",
+    "AssemblyVersion": "1.0.1",
     "Description": "A collection of small quality of life improvements and UI tweaks for Final Fantasy XIV.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SimpleTweaksPlugin",
@@ -146,7 +146,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Small tweaks, big impact.",
-    "Changelog": "- Custom build for friend",
+    "Changelog": "",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SimpleTweaksPlugin/main/images/icon.png",
     "ImageUrls": [],
     "AcceptsFeedback": false,
@@ -156,6 +156,6 @@
     "DownloadLinkTesting": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.0.1/SimpleTweaksVali.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.0.1/SimpleTweaksVali.zip",
     "DownloadCount": 3,
-    "LastUpdate": 1766208181
+    "LastUpdate": 1766209151
   }
 ]
