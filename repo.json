@@ -126,5 +126,36 @@
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.1.0/JobAutoSwitcher.zip",
     "DownloadCount": 19,
     "LastUpdate": 1766097291
+  },
+  {
+    "Author": "Caraxi & Vali",
+    "Name": "Simple Tweaks",
+    "InternalName": "SimpleTweaksPlugin",
+    "AssemblyVersion": "1.0.0",
+    "Description": "A collection of small quality of life improvements and UI tweaks for Final Fantasy XIV.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Valiice/SimpleTweaksPlugin",
+    "Tags": [
+      "tweaks",
+      "qol",
+      "ui"
+    ],
+    "DalamudApiLevel": 14,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "Small tweaks, big impact.",
+    "Changelog": "- Custom build for friend",
+    "IconUrl": "https://raw.githubusercontent.com/Valiice/SimpleTweaksPlugin/main/images/icon.png",
+    "ImageUrls": [],
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.0.0/SimpleTweaksPlugin.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.0.0/SimpleTweaksPlugin.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.0.0/SimpleTweaksPlugin.zip",
+    "DownloadCount": 0,
+    "LastUpdate": 1734671400
   }
 ]
