@@ -131,7 +131,7 @@
     "Author": "Caraxi & Vali",
     "Name": "Simple Tweaks",
     "InternalName": "SimpleTweaksPlugin",
-    "AssemblyVersion": "1.0.0",
+    "AssemblyVersion": "1.10.12.6",
     "Description": "A collection of small quality of life improvements and UI tweaks for Final Fantasy XIV.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SimpleTweaksPlugin",
