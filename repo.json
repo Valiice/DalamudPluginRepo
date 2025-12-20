@@ -150,11 +150,11 @@
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SimpleTweaksPlugin/main/images/icon.png",
     "ImageUrls": [],
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.0.0/SimpleTweaksPlugin.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.10.12.6/SimpleTweaksPlugin.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.0.0/SimpleTweaksPlugin.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.0.0/SimpleTweaksPlugin.zip",
+    "DownloadLinkTesting": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.10.12.6/SimpleTweaksPlugin.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/SimpleTweaksPlugin/releases/download/v1.10.12.6/SimpleTweaksPlugin.zip",
     "DownloadCount": 3,
     "LastUpdate": 1766208181
   }
