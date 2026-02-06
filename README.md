@@ -11,6 +11,7 @@ This is a custom plugin repository for **Dalamud**, the plugin framework for Fin
 | **Discord Chat Webhook** | **Simple, lightweight relay of game chat to Discord via Webhook.**<br>Relays chat to Discord via Webhook. | [Repo](https://github.com/Valiice/DiscordChatWebhook) |
 | **Job Auto Switcher** | **Never miss a queue pop because of the wrong job again.**<br>Automatically switches your gearset to match the queued job when you click Commence, bypassing the 'class/job is different' error. | [Repo](https://github.com/Valiice/JobAutoSwitcher) |
 | **Retainer Inventory Price** | **Calculate the total market value of all your retainers**<br>Scans your retainer inventories when you open them and calculates their total estimated market value using Universalis prices. | [Repo](https://github.com/Valiice/RetainerInventoryPrice) |
+| **Foxy Jumpscare** | **Random FNAF-style jumpscares for FFXIV!**<br>Triggers random fullscreen Withered Foxy jumpscares during gameplay, inspired by Five Nights at Freddy's mods. | [Repo](https://github.com/Valiice/FoxyJumpscare) |
 <!--END_MARKER-->
 ---
 
