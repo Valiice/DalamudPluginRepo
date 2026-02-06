@@ -159,5 +159,38 @@
     "DownloadLinkUpdate": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.0.0/RetainerInventoryPrice.zip",
     "DownloadCount": 15,
     "LastUpdate": 1766795415
+  },
+  {
+    "Author": "Vali",
+    "Name": "Foxy Jumpscare",
+    "InternalName": "FoxyJumpscare",
+    "AssemblyVersion": "1.0.0",
+    "Description": "Triggers random fullscreen Withered Foxy jumpscares during gameplay, inspired by Five Nights at Freddy's mods.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Valiice/FoxyJumpscare",
+    "Tags": [
+      "fun",
+      "horror",
+      "fnaf",
+      "jumpscare",
+      "entertainment"
+    ],
+    "DalamudApiLevel": 14,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": true,
+    "LoadPriority": 0,
+    "Punchline": "Random FNAF-style jumpscares for FFXIV!",
+    "Changelog": "- Initial release",
+    "IconUrl": "",
+    "ImageUrls": [],
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.0.0/FoxyJumpscare.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.0.0/FoxyJumpscare.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.0.0/FoxyJumpscare.zip",
+    "DownloadCount": 0,
+    "LastUpdate": 0
   }
 ]
