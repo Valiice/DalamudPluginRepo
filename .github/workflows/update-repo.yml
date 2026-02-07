@@ -1,0 +1,53 @@
+name: Update Repo JSON (Dispatch)
+
+on:
+  repository_dispatch:
+    types: [ plugin-release ]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-plugins
+  cancel-in-progress: false
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v5
+
+      - name: Update repo.json
+        run: |
+          PLUGIN="${{ github.event.client_payload.plugin }}"
+          VERSION="${{ github.event.client_payload.version }}"
+          TAG="${{ github.event.client_payload.tag }}"
+          REPO="${{ github.event.client_payload.repo }}"
+          TIMESTAMP=$(date +%s)
+
+          DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${TAG}/${PLUGIN}.zip"
+
+          jq --arg plugin "$PLUGIN" \
+             --arg version "$VERSION" \
+             --arg url "$DOWNLOAD_URL" \
+             --argjson timestamp "$TIMESTAMP" \
+             'map(if .InternalName == $plugin then
+               .AssemblyVersion = $version |
+               .DownloadLinkInstall = $url |
+               .DownloadLinkTesting = $url |
+               .DownloadLinkUpdate = $url |
+               .LastUpdate = $timestamp
+             else . end)' repo.json > repo.tmp.json && mv repo.tmp.json repo.json
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add repo.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Update ${{ github.event.client_payload.plugin }} to ${{ github.event.client_payload.tag }}"
+            git push
+          fi
