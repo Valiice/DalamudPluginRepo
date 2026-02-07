@@ -24,6 +24,7 @@ jobs:
           VERSION="${{ github.event.client_payload.version }}"
           TAG="${{ github.event.client_payload.tag }}"
           REPO="${{ github.event.client_payload.repo }}"
+          CHANGELOG="${{ github.event.client_payload.changelog }}"
           TIMESTAMP=$(date +%s)
 
           DOWNLOAD_URL="https://github.com/${REPO}/releases/download/${TAG}/${PLUGIN}.zip"
@@ -31,12 +32,14 @@ jobs:
           jq --arg plugin "$PLUGIN" \
              --arg version "$VERSION" \
              --arg url "$DOWNLOAD_URL" \
+             --arg changelog "$CHANGELOG" \
              --argjson timestamp "$TIMESTAMP" \
              'map(if .InternalName == $plugin then
                .AssemblyVersion = $version |
                .DownloadLinkInstall = $url |
                .DownloadLinkTesting = $url |
                .DownloadLinkUpdate = $url |
+               .Changelog = $changelog |
                .LastUpdate = $timestamp
              else . end)' repo.json > repo.tmp.json && mv repo.tmp.json repo.json
 
