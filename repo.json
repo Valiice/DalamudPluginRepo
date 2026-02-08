@@ -182,7 +182,7 @@
     "CanUnloadAsync": true,
     "LoadPriority": 0,
     "Punchline": "Random FNAF-style jumpscares for FFXIV!",
-    "Changelog": "- Release v1.2.0",
+    "Changelog": "- Fix changelog rev-parse outputting on failure\n- Fix audio volume affecting Windows mixer level\n- Fix changelog for workflow_dispatch with nonexistent tag",
     "IconUrl": "",
     "ImageUrls": [],
     "AcceptsFeedback": false,
@@ -192,6 +192,6 @@
     "DownloadLinkTesting": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.2.0/FoxyJumpscare.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.2.0/FoxyJumpscare.zip",
     "DownloadCount": 5,
-    "LastUpdate": 1770572497
+    "LastUpdate": 1770573432
   }
 ]
