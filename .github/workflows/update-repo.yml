@@ -18,6 +18,30 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v5
 
+      - name: Fetch Plugin Manifest
+        run: |
+          PLUGIN="${{ github.event.client_payload.plugin }}"
+          TAG="${{ github.event.client_payload.tag }}"
+          REPO="${{ github.event.client_payload.repo }}"
+
+          # Try to fetch manifest from the tagged release (most accurate)
+          MANIFEST_URL="https://raw.githubusercontent.com/${REPO}/${TAG}/${PLUGIN}/${PLUGIN}.json"
+
+          echo "Fetching manifest from: $MANIFEST_URL"
+          if curl -sf "$MANIFEST_URL" -o plugin-manifest.json; then
+            echo "Successfully fetched manifest from tag"
+          else
+            # Fallback to master branch if tag doesn't exist yet
+            echo "Tag not found, trying master branch"
+            MANIFEST_URL="https://raw.githubusercontent.com/${REPO}/master/${PLUGIN}/${PLUGIN}.json"
+            curl -sf "$MANIFEST_URL" -o plugin-manifest.json || echo "{}" > plugin-manifest.json
+          fi
+
+          # Extract metadata from manifest
+          echo "ICON_URL=$(jq -r '.IconUrl // ""' plugin-manifest.json)" >> $GITHUB_ENV
+          echo "DESCRIPTION=$(jq -r '.Description // ""' plugin-manifest.json)" >> $GITHUB_ENV
+          echo "PUNCHLINE=$(jq -r '.Punchline // ""' plugin-manifest.json)" >> $GITHUB_ENV
+
       - name: Update repo.json
         run: |
           PLUGIN="${{ github.event.client_payload.plugin }}"
@@ -33,6 +57,9 @@ jobs:
              --arg version "$VERSION" \
              --arg url "$DOWNLOAD_URL" \
              --arg changelog "$CHANGELOG" \
+             --arg iconUrl "$ICON_URL" \
+             --arg description "$DESCRIPTION" \
+             --arg punchline "$PUNCHLINE" \
              --argjson timestamp "$TIMESTAMP" \
              'map(if .InternalName == $plugin then
                .AssemblyVersion = $version |
@@ -40,7 +67,10 @@ jobs:
                .DownloadLinkTesting = $url |
                .DownloadLinkUpdate = $url |
                .Changelog = $changelog |
-               .LastUpdate = $timestamp
+               .LastUpdate = $timestamp |
+               (if $iconUrl != "" then .IconUrl = $iconUrl else . end) |
+               (if $description != "" then .Description = $description else . end) |
+               (if $punchline != "" then .Punchline = $punchline else . end)
              else . end)' repo.json > repo.tmp.json && mv repo.tmp.json repo.json
 
       - name: Commit and Push

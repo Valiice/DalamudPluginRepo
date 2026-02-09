@@ -183,7 +183,7 @@
     "LoadPriority": 0,
     "Punchline": "Random FNAF-style jumpscares for FFXIV!",
     "Changelog": "- Add right-click reset to settings sliders\n- Fix intermittent volume spike when Play() fails\n- Update README with badges and plugin repo install",
-    "IconUrl": "",
+    "IconUrl": "https://raw.githubusercontent.com/Valiice/FoxyJumpscare/master/images/icon.png",
     "ImageUrls": [],
     "AcceptsFeedback": false,
     "DownloadLinkInstall": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.3.0/FoxyJumpscare.zip",
