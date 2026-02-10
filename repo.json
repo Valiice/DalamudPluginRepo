@@ -115,7 +115,7 @@
     "CanUnloadAsync": true,
     "LoadPriority": 0,
     "Punchline": "Never miss a queue pop because of the wrong job again.",
-    "Changelog": "- Add CLAUDE.md and CHANGELOG.md\n- Overhaul CI with reusable build and plugin repo dispatch\n- Add config, commands, gearset prefs, job icons, Ko-fi button\n- Add icon",
+    "Changelog": "- Narrow unsafe blocks and fix initial window width\n- Remove changelog\n- Set version to 1.2.0\n- Add CLAUDE.md and CHANGELOG.md\n- Overhaul CI with reusable build and plugin repo dispatch\n- Add config, commands, gearset prefs, job icons, Ko-fi button\n- Add icon",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/JobAutoSwitcher/master/images/icon.png",
     "ImageUrls": [],
     "AcceptsFeedback": false,
@@ -125,7 +125,7 @@
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.2.0/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.2.0/JobAutoSwitcher.zip",
     "DownloadCount": 28,
-    "LastUpdate": 1770682393
+    "LastUpdate": 1770686937
   },
   {
     "Author": "Vali",
