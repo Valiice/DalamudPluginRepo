@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "- Fix changelog rev-parse outputting on failure\n- Fix changelog for workflow_dispatch with nonexistent tag\n- Fix changelog fallback when all commits are filtered",
+    "Changelog": "- Update .NET sdk",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/spotify_logo.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
