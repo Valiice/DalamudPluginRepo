@@ -181,9 +181,8 @@ def update_plugin_from_manifest(plugin: dict, manifest_data: dict, branch: str) 
     return updated
 
 
-def update_plugin_releases(plugin: dict, owner: str, repo: str) -> bool:
+def update_plugin_releases(plugin: dict, owner: str, repo: str) -> tuple[bool, str | None]:
     """Update plugin version and download information from latest release."""
-    updated = False
     internal_name = plugin.get("InternalName", "unknown")
 
     # Fetch latest release
@@ -207,11 +206,11 @@ def update_plugin_releases(plugin: dict, owner: str, repo: str) -> bool:
                 plugin["DownloadLinkUpdate"] = download_link
                 plugin["DownloadLinkTesting"] = download_link
                 plugin["Changelog"] = release.get("body", "")
-                updated = True
+                return True, f"{internal_name} to v{version}"
     except Exception as e:
         print(f"  Error fetching latest release for {internal_name}: {e}")
 
-    return updated
+    return False, None
 
 
 def update_plugin_stats(plugin: dict, owner: str, repo: str, kamori_counts: dict) -> bool:
@@ -266,6 +265,8 @@ def main():
         plugins = json.load(f)
 
     updated = False
+    version_updates: list[str] = []
+    stats_changed = False
     kamori_counts = fetch_kamori_counts()
 
     for i, plugin in enumerate(plugins):
@@ -289,12 +290,16 @@ def main():
                 updated = True
 
         # Update release information
-        if update_plugin_releases(plugin, owner, repo):
+        release_updated, version_str = update_plugin_releases(plugin, owner, repo)
+        if release_updated:
             updated = True
+            if version_str:
+                version_updates.append(version_str)
 
         # Update statistics
         if update_plugin_stats(plugin, owner, repo, kamori_counts):
             updated = True
+            stats_changed = True
 
         # Rate limiting
         time.sleep(RATE_LIMIT_DELAY)
@@ -312,6 +317,24 @@ def main():
         print("\nNo changes needed.")
         return 0
 
+    if version_updates:
+        if len(version_updates) == 1:
+            msg = f"Update {version_updates[0]}"
+        else:
+            names = ", ".join(v.split(" to ")[0] for v in version_updates)
+            msg = f"Update {names} to new versions"
+    elif stats_changed:
+        msg = "Update plugin download counts and stats"
+    else:
+        msg = "Update README plugin table"
+
+    if readme_changed and "README" not in msg:
+        msg += " and README"
+
+    with open(".commit_message.txt", "w", encoding="utf-8") as f:
+        f.write(msg)
+
+    print(f"\nCommit message: {msg}")
     print("\nUpdate complete!")
     return 0
 
