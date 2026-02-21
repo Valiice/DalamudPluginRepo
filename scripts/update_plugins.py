@@ -21,6 +21,19 @@ START_MARKER = "<!--START_MARKER-->"
 END_MARKER = "<!--END_MARKER-->"
 REQUEST_TIMEOUT = 10  # seconds
 RATE_LIMIT_DELAY = 1  # seconds between API calls
+KAMORI_COUNTS_URL = "https://kamori.goats.dev/Plugin/DownloadCounts"
+
+
+def fetch_kamori_counts() -> dict:
+    """Fetch official Dalamud installer download counts from kamori.goats.dev."""
+    try:
+        response = requests.get(KAMORI_COUNTS_URL, timeout=REQUEST_TIMEOUT)
+        if response.status_code == 200:
+            print("  Fetched kamori download counts.")
+            return response.json()
+    except Exception as e:
+        print(f"  Warning: could not fetch kamori counts: {e}")
+    return {}
 
 
 def get_owner_repo(url: str) -> Tuple[Optional[str], Optional[str]]:
@@ -201,7 +214,7 @@ def update_plugin_releases(plugin: dict, owner: str, repo: str) -> bool:
     return updated
 
 
-def update_plugin_stats(plugin: dict, owner: str, repo: str) -> bool:
+def update_plugin_stats(plugin: dict, owner: str, repo: str, kamori_counts: dict) -> bool:
     """Update plugin download count and last update time."""
     updated = False
     internal_name = plugin.get("InternalName", "unknown")
@@ -220,6 +233,7 @@ def update_plugin_stats(plugin: dict, owner: str, repo: str) -> bool:
                 for asset in release.get("assets", [])
                 if asset.get("name", "").endswith(".zip")
             )
+            total_downloads += kamori_counts.get(internal_name, 0)
 
             if plugin.get("DownloadCount") != total_downloads:
                 plugin["DownloadCount"] = total_downloads
@@ -252,6 +266,7 @@ def main():
         plugins = json.load(f)
 
     updated = False
+    kamori_counts = fetch_kamori_counts()
 
     for i, plugin in enumerate(plugins):
         repo_url = plugin.get("RepoUrl")
@@ -278,7 +293,7 @@ def main():
             updated = True
 
         # Update statistics
-        if update_plugin_stats(plugin, owner, repo):
+        if update_plugin_stats(plugin, owner, repo, kamori_counts):
             updated = True
 
         # Rate limiting
@@ -286,7 +301,7 @@ def main():
 
     # Save updated plugins
     if updated:
-        print("\n✓ Updating repo.json...")
+        print("\nUpdating repo.json...")
         with open(REPO_FILE, "w", encoding="utf-8") as f:
             json.dump(plugins, f, indent=2, ensure_ascii=False)
 
@@ -294,10 +309,10 @@ def main():
     readme_changed = update_readme(plugins)
 
     if not updated and not readme_changed:
-        print("\n✓ No changes needed.")
+        print("\nNo changes needed.")
         return 0
 
-    print("\n✓ Update complete!")
+    print("\nUpdate complete!")
     return 0
 
 
