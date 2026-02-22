@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.6.3/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.6.3/SpotifyHonorific.zip",
-    "DownloadCount": 538,
+    "DownloadCount": 543,
     "LastUpdate": 1771304792
   },
   {
@@ -62,7 +62,7 @@
     "DownloadLinkTesting": "https://github.com/Valiice/LootTracker/releases/download/v1.0.0/DropLogger.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/LootTracker/releases/download/v1.0.0/DropLogger.zip",
     "DownloadCount": 3,
-    "LastUpdate": 1763710862
+    "LastUpdate": 1763714462
   },
   {
     "Author": "Vali",
@@ -93,7 +93,7 @@
     "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.1.0/DiscordChatWebhook.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.1.0/DiscordChatWebhook.zip",
     "DownloadCount": 10,
-    "LastUpdate": 1766093420
+    "LastUpdate": 1766097020
   },
   {
     "Author": "Vali",
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.2.0/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.2.0/JobAutoSwitcher.zip",
-    "DownloadCount": 1153,
+    "DownloadCount": 1156,
     "LastUpdate": 1770686924
   },
   {
@@ -191,7 +191,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.3.2/FoxyJumpscare.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.3.2/FoxyJumpscare.zip",
-    "DownloadCount": 21,
+    "DownloadCount": 22,
     "LastUpdate": 1771043245
   }
 ]
