@@ -3,7 +3,7 @@
     "Author": "Vali",
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
-    "AssemblyVersion": "1.8.0",
+    "AssemblyVersion": "1.9.0",
     "Description": "Update honorific title based on your currently playing Spotify track",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",
@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "- feat: gate gradient on IsHonorificSupporter, move checkbox to gradient row\n- feat: add gradient glow picker to ConfigWindow\n- feat: include gradient fields in Honorific IPC payload\n- feat: add GradientColourSet, GradientAnimationStyle, Color3 to ActivityConfig\n- feat: add gradient animation style enum and preset names",
+    "Changelog": "- chore: remove redundant comments\n- fix: title recovery on repeat, poll thread dispatch, CTS scope",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/spotify_logo.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
@@ -26,13 +26,13 @@
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image3.png"
     ],
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.8.0/SpotifyHonorific.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.9.0/SpotifyHonorific.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.8.0/SpotifyHonorific.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.8.0/SpotifyHonorific.zip",
+    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.9.0/SpotifyHonorific.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.9.0/SpotifyHonorific.zip",
     "DownloadCount": 1995,
-    "LastUpdate": 1776478284
+    "LastUpdate": 1776961298
   },
   {
     "Author": "Vali",
