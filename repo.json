@@ -3,7 +3,7 @@
     "Author": "Vali",
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
-    "AssemblyVersion": "1.10.0",
+    "AssemblyVersion": "1.10.1",
     "Description": "Update honorific title based on your currently playing Spotify track",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",
@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "- fix: gate gradient on IsHonorificSupporter at parent, fix push/pop balance\n- feat: add confirmation step to Delete All button\n- refactor: replace gradient animation radio buttons with Combo\n- refactor: collapse gradient settings behind CollapsingHeader\n- refactor: move Supporter checkbox to Account tab\n- refactor: move Active Config selector into Config tab\n- feat: restructure config window into tabbed layout\n- feat: use real track in preview, add filter template evaluation\n- feat: wire PlaybackState through Updater, ConfigWindow, and Plugin\n- fix: re-send title to Honorific after zone change\n- chore: ignore docs dir, remove tracked spec files\n- docs: add live preview implementation plan\n- docs: add live preview PlaybackState design spec",
+    "Changelog": "- feat: show Gradient Glow hint with tooltip for non-supporters",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/spotify_logo.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
@@ -26,13 +26,13 @@
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image3.png"
     ],
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.0/SpotifyHonorific.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.1/SpotifyHonorific.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.0/SpotifyHonorific.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.0/SpotifyHonorific.zip",
+    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.1/SpotifyHonorific.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.1/SpotifyHonorific.zip",
     "DownloadCount": 2226,
-    "LastUpdate": 1776984602
+    "LastUpdate": 1777075327
   },
   {
     "Author": "Vali",
