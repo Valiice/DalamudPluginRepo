@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.1/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.1/SpotifyHonorific.zip",
-    "DownloadCount": 2448,
+    "DownloadCount": 2467,
     "LastUpdate": 1777075320
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.2.0/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.2.0/JobAutoSwitcher.zip",
-    "DownloadCount": 3156,
+    "DownloadCount": 3168,
     "LastUpdate": 1770686924
   },
   {
@@ -222,6 +222,8 @@
     "IsHide": false,
     "IsTestingExclusive": false,
     "AcceptsFeedback": false,
-    "LastUpdate": 0
+    "LastUpdate": 1777216200,
+    "ImageUrls": [],
+    "DownloadCount": 0
   }
 ]
