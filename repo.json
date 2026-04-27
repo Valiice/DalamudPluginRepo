@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.1/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.1/SpotifyHonorific.zip",
-    "DownloadCount": 2467,
+    "DownloadCount": 2492,
     "LastUpdate": 1777075320
   },
   {
@@ -92,7 +92,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.1.0/DiscordChatWebhook.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.1.0/DiscordChatWebhook.zip",
-    "DownloadCount": 13,
+    "DownloadCount": 14,
     "LastUpdate": 1766097020
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.2.0/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.2.0/JobAutoSwitcher.zip",
-    "DownloadCount": 3168,
+    "DownloadCount": 3187,
     "LastUpdate": 1770686924
   },
   {
@@ -222,8 +222,8 @@
     "IsHide": false,
     "IsTestingExclusive": false,
     "AcceptsFeedback": false,
-    "LastUpdate": 1777230318,
+    "LastUpdate": 1777230311,
     "ImageUrls": [],
-    "DownloadCount": 0
+    "DownloadCount": 1
   }
 ]
