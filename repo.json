@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.1/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.10.1/SpotifyHonorific.zip",
-    "DownloadCount": 2554,
+    "DownloadCount": 2572,
     "LastUpdate": 1777075320
   },
   {
@@ -61,7 +61,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/LootTracker/releases/download/v1.0.0/DropLogger.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/LootTracker/releases/download/v1.0.0/DropLogger.zip",
-    "DownloadCount": 0,
+    "DownloadCount": 3,
     "LastUpdate": 1763714462
   },
   {
@@ -92,7 +92,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.1.0/DiscordChatWebhook.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.1.0/DiscordChatWebhook.zip",
-    "DownloadCount": 0,
+    "DownloadCount": 14,
     "LastUpdate": 1766097020
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.2.0/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.2.0/JobAutoSwitcher.zip",
-    "DownloadCount": 3192,
+    "DownloadCount": 3240,
     "LastUpdate": 1770686924
   },
   {
@@ -157,7 +157,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.0.0/RetainerInventoryPrice.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.0.0/RetainerInventoryPrice.zip",
-    "DownloadCount": 0,
+    "DownloadCount": 25,
     "LastUpdate": 1766795415
   },
   {
@@ -191,7 +191,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.3.2/FoxyJumpscare.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.3.2/FoxyJumpscare.zip",
-    "DownloadCount": 0,
+    "DownloadCount": 28,
     "LastUpdate": 1771043245
   },
   {
@@ -224,6 +224,6 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1777230311,
     "ImageUrls": [],
-    "DownloadCount": 0
+    "DownloadCount": 2
   }
 ]
