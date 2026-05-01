@@ -3,7 +3,7 @@
     "Author": "Vali",
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
-    "AssemblyVersion": "1.11.1.0",
+    "AssemblyVersion": "1.11.1",
     "Description": "Update honorific title based on your currently playing Spotify track",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",
@@ -18,8 +18,8 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "- ci: fall back to staging Dalamud if stable build fails\n- Upgrade to Dalamud.NET.Sdk 15.0.0, fix TerritoryChanged signature",
-    "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/spotify_logo.png",
+    "Changelog": "- ci: fall back to staging Dalamud if stable build fails\n- Upgrade to Dalamud.NET.Sdk 15.0.0, fix TerritoryChanged signature\n",
+    "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/icon.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image2.png",
@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.11.1/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.11.1/SpotifyHonorific.zip",
-    "DownloadCount": 2584,
+    "DownloadCount": 2684,
     "LastUpdate": 1777578599
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 3712,
+    "DownloadCount": 3803,
     "LastUpdate": 1777552378
   },
   {
@@ -164,7 +164,7 @@
     "Author": "Vali",
     "Name": "Foxy Jumpscare",
     "InternalName": "FoxyJumpscare",
-    "AssemblyVersion": "1.4.1.0",
+    "AssemblyVersion": "1.4.1",
     "Description": "Triggers random fullscreen Withered Foxy jumpscares during gameplay, inspired by Five Nights at Freddy's mods.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/FoxyJumpscare",
@@ -182,7 +182,7 @@
     "CanUnloadAsync": true,
     "LoadPriority": 0,
     "Punchline": "Random FNAF-style jumpscares for FFXIV!",
-    "Changelog": "- chore: bump version to 1.4.1",
+    "Changelog": "- chore: bump version to 1.4.1\n",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/FoxyJumpscare/master/images/icon.png",
     "ImageUrls": [],
     "AcceptsFeedback": false,
@@ -191,8 +191,8 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.4.1/FoxyJumpscare.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.4.1/FoxyJumpscare.zip",
-    "DownloadCount": 28,
-    "LastUpdate": 1777600178
+    "DownloadCount": 31,
+    "LastUpdate": 1777600166
   },
   {
     "Author": "Valiice",
