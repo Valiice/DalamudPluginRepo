@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "- ci: fall back to staging Dalamud if stable build fails\n- Upgrade to Dalamud.NET.Sdk 15.0.0, fix TerritoryChanged signature\n",
+    "Changelog": "- Add custom plugin icon\n- chore: add version 1.11.0, update icon URL for store submission",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/icon.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
@@ -32,7 +32,7 @@
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.11.1/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.11.1/SpotifyHonorific.zip",
     "DownloadCount": 2796,
-    "LastUpdate": 1777578599
+    "LastUpdate": 1777668982
   },
   {
     "Author": "Vali",
