@@ -3,7 +3,7 @@
     "Author": "Vali",
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
-    "AssemblyVersion": "1.11.2.0",
+    "AssemblyVersion": "1.11.2",
     "Description": "Update honorific title based on your currently playing Spotify track",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",
@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "- ci: use 4-part assembly version in release workflow",
+    "Changelog": "- ci: use 4-part assembly version in release workflow\n",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/icon.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
@@ -31,8 +31,8 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.11.2/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.11.2/SpotifyHonorific.zip",
-    "DownloadCount": 4746,
-    "LastUpdate": 1778184179
+    "DownloadCount": 4923,
+    "LastUpdate": 1778184163
   },
   {
     "Author": "Vali",
@@ -92,7 +92,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.2.0/DiscordChatWebhook.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.2.0/DiscordChatWebhook.zip",
-    "DownloadCount": 39,
+    "DownloadCount": 48,
     "LastUpdate": 1777889033
   },
   {
@@ -124,14 +124,14 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 5880,
+    "DownloadCount": 5917,
     "LastUpdate": 1777552378
   },
   {
     "Author": "Vali",
     "Name": "Retainer Inventory Price",
     "InternalName": "RetainerInventoryPrice",
-    "AssemblyVersion": "1.2.0.0",
+    "AssemblyVersion": "1.2.0",
     "Description": "Scans your retainer inventories when you open them and calculates their total estimated market value using Universalis prices.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/RetainerInventoryPrice",
@@ -148,7 +148,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Calculate the total market value of all your retainers",
-    "Changelog": "- Fix DalamudApiLevel to 15, rebuild against current Dalamud",
+    "Changelog": "- Fix DalamudApiLevel to 15 in manifest\n",
     "IconUrl": "",
     "ImageUrls": [],
     "AcceptsFeedback": false,
@@ -157,14 +157,14 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.0/RetainerInventoryPrice.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.0/RetainerInventoryPrice.zip",
-    "DownloadCount": 28,
-    "LastUpdate": 1766795415
+    "DownloadCount": 36,
+    "LastUpdate": 1778183762
   },
   {
     "Author": "Vali",
     "Name": "Foxy Jumpscare",
     "InternalName": "FoxyJumpscare",
-    "AssemblyVersion": "1.4.2.0",
+    "AssemblyVersion": "1.4.2",
     "Description": "Triggers random fullscreen Withered Foxy jumpscares during gameplay, inspired by Five Nights at Freddy's mods.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/FoxyJumpscare",
@@ -182,7 +182,7 @@
     "CanUnloadAsync": true,
     "LoadPriority": 0,
     "Punchline": "Random FNAF-style jumpscares for FFXIV!",
-    "Changelog": "- Rebuild against current Dalamud",
+    "Changelog": "- ci: use 4-part assembly version, bump action versions\n",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/FoxyJumpscare/master/images/icon.png",
     "ImageUrls": [],
     "AcceptsFeedback": false,
@@ -191,8 +191,8 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.4.2/FoxyJumpscare.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.4.2/FoxyJumpscare.zip",
-    "DownloadCount": 46,
-    "LastUpdate": 1778183815
+    "DownloadCount": 50,
+    "LastUpdate": 1778183802
   },
   {
     "Author": "Valiice",
