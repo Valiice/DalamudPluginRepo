@@ -3,7 +3,7 @@
     "Author": "Vali",
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
-    "AssemblyVersion": "1.12.0.0",
+    "AssemblyVersion": "1.12.0",
     "Description": "Update honorific title based on your currently playing Spotify track",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",
@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "- Extract auth notification cooldown logic for testability\n- Add periodic auth warning notification with toggle",
+    "Changelog": "- Extract auth notification cooldown logic for testability\n- Add periodic auth warning notification with toggle\n",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/icon.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
@@ -31,8 +31,8 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.12.0/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.12.0/SpotifyHonorific.zip",
-    "DownloadCount": 7342,
-    "LastUpdate": 1779256905
+    "DownloadCount": 7391,
+    "LastUpdate": 1779256896
   },
   {
     "Author": "Vali",
@@ -92,7 +92,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.2.0/DiscordChatWebhook.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.2.0/DiscordChatWebhook.zip",
-    "DownloadCount": 108,
+    "DownloadCount": 110,
     "LastUpdate": 1777889033
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 6699,
+    "DownloadCount": 6716,
     "LastUpdate": 1777552378
   },
   {
