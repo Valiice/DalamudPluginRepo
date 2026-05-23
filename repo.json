@@ -3,7 +3,7 @@
     "Author": "Vali",
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
-    "AssemblyVersion": "1.12.0",
+    "AssemblyVersion": "1.12.0.0",
     "Description": "Update honorific title based on your currently playing Spotify track",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",

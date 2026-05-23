@@ -192,6 +192,8 @@ def update_plugin_releases(plugin: dict, owner: str, repo: str) -> tuple[bool, s
         if response.status_code == 200:
             release = response.json()
             version = release.get("tag_name", "").lstrip("v")
+            if re.match(r"^\d+\.\d+\.\d+$", version):
+                version = f"{version}.0"
             download_link = next(
                 (asset["browser_download_url"]
                  for asset in release.get("assets", [])
