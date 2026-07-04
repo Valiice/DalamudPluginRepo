@@ -225,5 +225,35 @@
     "LastUpdate": 1777668768,
     "ImageUrls": [],
     "DownloadCount": 21
+  },
+  {
+    "Author": "Vali",
+    "Name": "EmoteReactor",
+    "InternalName": "EmoteReactor",
+    "AssemblyVersion": "0.1.0.0",
+    "Description": "Define rules: when a player targets you and performs an emote, automatically perform an emote back.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Valiice/EmoteReactor",
+    "Tags": [
+      "emote",
+      "social",
+      "reaction"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "React with an emote when someone emotes at you.",
+    "Changelog": "- Initial release",
+    "DownloadLinkInstall": "https://github.com/Valiice/EmoteReactor/releases/download/v0.1.0/EmoteReactor.zip",
+    "DownloadLinkTesting": "https://github.com/Valiice/EmoteReactor/releases/download/v0.1.0/EmoteReactor.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/EmoteReactor/releases/download/v0.1.0/EmoteReactor.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "AcceptsFeedback": false,
+    "LastUpdate": 0,
+    "ImageUrls": [],
+    "DownloadCount": 0
   }
 ]
