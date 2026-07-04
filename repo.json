@@ -3,7 +3,7 @@
     "Author": "Vali",
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
-    "AssemblyVersion": "1.13.3.0",
+    "AssemblyVersion": "1.14.0.0",
     "Description": "Update honorific title based on your currently playing Spotify track",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",
@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "- Update plugin repository URL in README",
+    "Changelog": "- Replace em dashes with plain punctuation in comments and UI text\n- Add tip about needing both track and artist phases for accurate queueing\n- Gate nearby watcher on plugin Enabled toggle, back off Honorific IPC reads after failure\n- Fix review findings: refresh-token race, cache eviction order, stale client after re-auth, IPC JSON hardening, 401 queue message\n- Fix stale DiscordActivityHonorific chat tag in title-length error\n- Credit DiscordActivityHonorific as the project's origin in README\n- Add copyright notice and artwork exception to README license section\n- Friendly error for no-active-Spotify-device, add context menu prefix icon\n- Add Nearby tab to the config window\n- Prefer the search result whose name matches the title we actually saw\n- Show the pending Spotify search query as a tooltip on the Queue button\n- Treat playback-timer phases as no-info, show last-known song in window\n- Stop stale cached samples from corrupting queue search queries\n- Add Queue button to Nearby Listening window rows, fix oversized default window\n- Cache recent non-placeholder titles per player, fix queuing off the placeholder phase\n- Add optional song-title heuristic filter to the Nearby Listening window\n- Extract real title text from Honorific's JSON response, filter to custom titles, add search box\n- Only show Queue their track menu item when target has a Honorific title\n- Add right-click Queue their track context menu action\n- Add user-modify-playback-state scope and TrackQueueService\n- Add Nearby Listening window and /spotifyhonorific nearby command\n- Wire NearbyTitleWatcher into Updater's framework loop\n- Add NearbyTitleWatcher polling nearby players via Honorific IPC\n- Add HonorificTitleReader wrapping Honorific.GetCharacterTitle IPC\n- Add NearbyTitleHistory capped session log\n- Add TitleTextCleaner for stripping decorative title symbols\n- chore(deps): bump actions/cache from 5 to 6\n- chore(deps): bump actions/checkout from 6 to 7",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/icon.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
@@ -26,13 +26,13 @@
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image3.png"
     ],
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.13.3/SpotifyHonorific.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.14.0/SpotifyHonorific.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.13.3/SpotifyHonorific.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.13.3/SpotifyHonorific.zip",
+    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.14.0/SpotifyHonorific.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.14.0/SpotifyHonorific.zip",
     "DownloadCount": 10378,
-    "LastUpdate": 1782796786
+    "LastUpdate": 1783145051
   },
   {
     "Author": "Vali",
