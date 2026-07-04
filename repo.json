@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.13.3/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.13.3/SpotifyHonorific.zip",
-    "DownloadCount": 10376,
+    "DownloadCount": 10378,
     "LastUpdate": 1782796786
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 8387,
+    "DownloadCount": 8388,
     "LastUpdate": 1777552378
   },
   {
@@ -244,7 +244,7 @@
     "LoadSync": false,
     "CanUnloadAsync": false,
     "LoadPriority": 0,
-    "Punchline": "React with an emote when someone emotes at you.",
+    "Punchline": "React with an emote when someone emotes at you",
     "Changelog": "- Create LICENSE\n- docs: add README\n- ci: add build/release workflows and dependabot (mirrors SpotifyHonorific, with submodule checkout)\n- feat: gate diagnostics panel + emote logging behind debug toggle, log only directed emotes\n- feat: replace delay min/max boxes with a range slider\n- feat: use ECommons for chat send and ClientStructs EmoteController hook for detection\n- feat: readable rule wording, tooltips, and diagnostics/debug panel\n- feat: show emote icons in config dropdowns\n- fix: thread-safe reaction queue, tighten hook availability, add throttle/delay edge tests\n- feat: add configuration window with rule editor\n- feat: wire detection, decision, and action pipeline\n- feat: add emote reader hook interop shell\n- fix: gate ChatSender availability only on the function it uses\n- feat: add chat command sender interop shell\n- feat: add EmoteExecutor scheduled reaction queue\n- feat: add ReactionEngine decision logic with cooldown, throttle, delay\n- feat: add searchable emote catalog\n- feat: add ReactionRule model and config rules list\n- feat: scaffold EmoteReactor plugin and test project\n- chore: add .gitignore",
     "DownloadLinkInstall": "https://github.com/Valiice/EmoteReactor/releases/download/v0.1.0/EmoteReactor.zip",
     "DownloadLinkTesting": "https://github.com/Valiice/EmoteReactor/releases/download/v0.1.0/EmoteReactor.zip",
@@ -252,8 +252,8 @@
     "IsHide": false,
     "IsTestingExclusive": false,
     "AcceptsFeedback": false,
-    "LastUpdate": 1783133450,
+    "LastUpdate": 1783133444,
     "ImageUrls": [],
-    "DownloadCount": 0
+    "DownloadCount": 5
   }
 ]
