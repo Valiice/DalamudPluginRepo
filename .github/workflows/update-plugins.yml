@@ -46,7 +46,7 @@ jobs:
       - name: Check for changes
         id: check_changes
         run: |
-          if git diff --quiet repo.json README.md; then
+          if git diff --quiet repo.json README.md badge.json; then
             echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             echo "has_changes=true" >> $GITHUB_OUTPUT
@@ -57,6 +57,6 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add repo.json README.md
+          git add repo.json README.md badge.json
           git commit -m "${{ steps.update_script.outputs.commit_msg }}"
           git push

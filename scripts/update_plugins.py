@@ -17,6 +17,7 @@ GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN')
 HEADERS = {'Authorization': f'token {GITHUB_TOKEN}'} if GITHUB_TOKEN else {}
 REPO_FILE = "repo.json"
 README_FILE = "README.md"
+BADGE_FILE = "badge.json"
 START_MARKER = "<!--START_MARKER-->"
 END_MARKER = "<!--END_MARKER-->"
 REQUEST_TIMEOUT = 10  # seconds
@@ -130,6 +131,38 @@ def update_readme(plugins_list: list) -> bool:
         return True
 
     return False
+
+
+def format_count(count: int) -> str:
+    """Format a download count for badge display (e.g. 19729 -> 19.7k)."""
+    if count >= 1_000_000:
+        return f"{count / 1_000_000:.1f}M"
+    if count >= 1000:
+        return f"{count / 1000:.1f}k"
+    return str(count)
+
+
+def update_badge(plugins_list: list) -> bool:
+    """Write a shields.io endpoint JSON with the total download count."""
+    total = sum(p.get("DownloadCount", 0) for p in plugins_list)
+    badge = {
+        "schemaVersion": 1,
+        "label": "total downloads",
+        "message": format_count(total),
+        "color": "7aa2f7",
+        "labelColor": "1a1b26"
+    }
+    content = json.dumps(badge, indent=2) + "\n"
+
+    if os.path.exists(BADGE_FILE):
+        with open(BADGE_FILE, "r", encoding="utf-8") as f:
+            if f.read() == content:
+                return False
+
+    with open(BADGE_FILE, "w", encoding="utf-8") as f:
+        f.write(content)
+    print("badge.json updated.")
+    return True
 
 
 def fetch_manifest(owner: str, repo: str, internal_name: str) -> Tuple[Optional[dict], str]:
@@ -312,10 +345,11 @@ def main():
         with open(REPO_FILE, "w", encoding="utf-8") as f:
             json.dump(plugins, f, indent=2, ensure_ascii=False)
 
-    # Update README
+    # Update README and total downloads badge
     readme_changed = update_readme(plugins)
+    badge_changed = update_badge(plugins)
 
-    if not updated and not readme_changed:
+    if not updated and not readme_changed and not badge_changed:
         print("\nNo changes needed.")
         return 0
 
@@ -327,8 +361,10 @@ def main():
             msg = f"Update {names} to new versions"
     elif stats_changed:
         msg = "Update plugin download counts and stats"
-    else:
+    elif readme_changed:
         msg = "Update README plugin table"
+    else:
+        msg = "Update total downloads badge"
 
     if readme_changed and "README" not in msg:
         msg += " and README"
