@@ -3,7 +3,7 @@
     "Author": "Vali",
     "Name": "SpotifyHonorific",
     "InternalName": "SpotifyHonorific",
-    "AssemblyVersion": "1.14.0.0",
+    "AssemblyVersion": "1.15.0.0",
     "Description": "Update honorific title based on your currently playing Spotify track",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SpotifyHonorific",
@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "- New: Nearby Listening. See what players around you are listening to with /spotifyhonorific nearby or the new Nearby tab in the config window\n- New: right-click a nearby player and pick 'Queue their track' to add their current song to your own Spotify queue\n- Queue buttons show what Spotify will search for before you click\n- Clearer error messages when Spotify has no active device or is missing permissions\n- Queueing needs Spotify Premium and a one-time re-auth in the config to grant the new permission",
+    "Changelog": "- Announce rate limit in chat once per episode\n- Add song and artist cycling template example to README\n- Throttle title rendering and apply config edits mid-track\n- Pause polling on Spotify 429 per Retry-After instead of tight retrying",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/icon.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
@@ -26,13 +26,13 @@
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image3.png"
     ],
     "AcceptsFeedback": false,
-    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.14.0/SpotifyHonorific.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.15.0/SpotifyHonorific.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.14.0/SpotifyHonorific.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.14.0/SpotifyHonorific.zip",
+    "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.15.0/SpotifyHonorific.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.15.0/SpotifyHonorific.zip",
     "DownloadCount": 10975,
-    "LastUpdate": 1783145043
+    "LastUpdate": 1783549971
   },
   {
     "Author": "Vali",
