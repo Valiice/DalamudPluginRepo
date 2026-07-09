@@ -18,7 +18,7 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Your Spotify song as an honorific",
-    "Changelog": "- Add rate limit protection mode with adaptive polling\n- Document commit hygiene for public changelog in CLAUDE.md",
+    "Changelog": "- Add rate limit protection mode with adaptive polling",
     "IconUrl": "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/icon.png",
     "ImageUrls": [
       "https://raw.githubusercontent.com/Valiice/SpotifyHonorific/master/images/image1.png",
