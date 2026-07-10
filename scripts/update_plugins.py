@@ -7,7 +7,7 @@ import os
 import re
 import sys
 import time
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Optional, Tuple, List
 
 import requests
@@ -18,6 +18,8 @@ HEADERS = {'Authorization': f'token {GITHUB_TOKEN}'} if GITHUB_TOKEN else {}
 REPO_FILE = "repo.json"
 README_FILE = "README.md"
 BADGE_FILE = "badge.json"
+HISTORY_FILE = "stats/history.csv"
+HISTORY_HEADER = "timestamp,plugin,tag,published,downloads"
 START_MARKER = "<!--START_MARKER-->"
 END_MARKER = "<!--END_MARKER-->"
 REQUEST_TIMEOUT = 10  # seconds
@@ -165,6 +167,39 @@ def update_badge(plugins_list: list) -> bool:
     return True
 
 
+def load_last_history_counts() -> dict:
+    """Read the most recent recorded download count per (plugin, tag) from the history CSV."""
+    counts = {}
+    if not os.path.exists(HISTORY_FILE):
+        return counts
+
+    with open(HISTORY_FILE, "r", encoding="utf-8") as f:
+        next(f, None)  # skip header
+        for line in f:
+            parts = line.rstrip("\n").split(",")
+            if len(parts) == 5:
+                counts[(parts[1], parts[2])] = int(parts[4])
+    return counts
+
+
+def append_history(rows: List[tuple]) -> bool:
+    """Append per-release download counts that changed since the last snapshot."""
+    last_counts = load_last_history_counts()
+    changed = [r for r in rows if last_counts.get((r[1], r[2])) != r[4]]
+    if not changed:
+        return False
+
+    os.makedirs(os.path.dirname(HISTORY_FILE), exist_ok=True)
+    is_new = not os.path.exists(HISTORY_FILE)
+    with open(HISTORY_FILE, "a", encoding="utf-8", newline="") as f:
+        if is_new:
+            f.write(HISTORY_HEADER + "\n")
+        for timestamp, plugin, tag, published, count in changed:
+            f.write(f"{timestamp},{plugin},{tag},{published},{count}\n")
+    print(f"{HISTORY_FILE}: appended {len(changed)} rows.")
+    return True
+
+
 def fetch_manifest(owner: str, repo: str, internal_name: str) -> Tuple[Optional[dict], str]:
     """Fetch plugin manifest from GitHub."""
     manifest_candidates = [
@@ -248,8 +283,9 @@ def update_plugin_releases(plugin: dict, owner: str, repo: str) -> tuple[bool, s
     return False, None
 
 
-def update_plugin_stats(plugin: dict, owner: str, repo: str, kamori_counts: dict) -> bool:
-    """Update plugin download count and last update time."""
+def update_plugin_stats(plugin: dict, owner: str, repo: str, kamori_counts: dict,
+                        history_rows: List[tuple], snapshot_ts: str) -> bool:
+    """Update plugin download count and last update time, and collect per-release history rows."""
     updated = False
     internal_name = plugin.get("InternalName", "unknown")
 
@@ -268,6 +304,19 @@ def update_plugin_stats(plugin: dict, owner: str, repo: str, kamori_counts: dict
                 if asset.get("name", "").endswith(".zip")
             )
             total_downloads += kamori_counts.get(internal_name, 0)
+
+            # Collect per-release counts for the history snapshot
+            for release in all_releases:
+                tag = release.get("tag_name")
+                if not tag:
+                    continue
+                count = sum(
+                    asset.get("download_count", 0)
+                    for asset in release.get("assets", [])
+                    if asset.get("name", "").endswith(".zip")
+                )
+                published = release.get("published_at") or release.get("created_at") or ""
+                history_rows.append((snapshot_ts, internal_name, tag, published, count))
 
             if plugin.get("DownloadCount") != total_downloads:
                 plugin["DownloadCount"] = total_downloads
@@ -303,6 +352,8 @@ def main():
     version_updates: list[str] = []
     stats_changed = False
     kamori_counts = fetch_kamori_counts()
+    history_rows: List[tuple] = []
+    snapshot_ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
     for i, plugin in enumerate(plugins):
         repo_url = plugin.get("RepoUrl")
@@ -332,7 +383,7 @@ def main():
                 version_updates.append(version_str)
 
         # Update statistics
-        if update_plugin_stats(plugin, owner, repo, kamori_counts):
+        if update_plugin_stats(plugin, owner, repo, kamori_counts, history_rows, snapshot_ts):
             updated = True
             stats_changed = True
 
@@ -345,11 +396,12 @@ def main():
         with open(REPO_FILE, "w", encoding="utf-8") as f:
             json.dump(plugins, f, indent=2, ensure_ascii=False)
 
-    # Update README and total downloads badge
+    # Update README, total downloads badge and per-release history
     readme_changed = update_readme(plugins)
     badge_changed = update_badge(plugins)
+    history_changed = append_history(history_rows)
 
-    if not updated and not readme_changed and not badge_changed:
+    if not updated and not readme_changed and not badge_changed and not history_changed:
         print("\nNo changes needed.")
         return 0
 
@@ -359,7 +411,7 @@ def main():
         else:
             names = ", ".join(v.split(" to ")[0] for v in version_updates)
             msg = f"Update {names} to new versions"
-    elif stats_changed:
+    elif stats_changed or history_changed:
         msg = "Update plugin download counts and stats"
     elif readme_changed:
         msg = "Update README plugin table"
