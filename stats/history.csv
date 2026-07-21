@@ -123,3 +123,5 @@ timestamp,plugin,tag,published,downloads
 2026-07-20T14:02:01Z,RetainerInventoryPrice,v1.2.0,2026-05-07T19:56:02Z,66
 2026-07-20T19:41:30Z,SpotifyHonorific,v1.17.1,2026-07-10T08:01:33Z,774
 2026-07-21T02:32:08Z,SpotifyHonorific,v1.17.1,2026-07-10T08:01:33Z,781
+2026-07-21T08:25:05Z,SpotifyHonorific,v1.17.1,2026-07-10T08:01:33Z,787
+2026-07-21T08:25:05Z,JobAutoSwitcher,v1.3.1,2026-04-30T12:32:58Z,10
