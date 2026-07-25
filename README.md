@@ -14,6 +14,7 @@ This is a custom plugin repository for **Dalamud**, the plugin framework for Fin
 | **Foxy Jumpscare** | **Random FNAF-style jumpscares for FFXIV!**<br>Triggers random fullscreen Withered Foxy jumpscares during gameplay, inspired by Five Nights at Freddy's mods. | [Repo](https://github.com/Valiice/FoxyJumpscare) |
 | **ProvokeCounter** | **Counts how many times tanks provoke in your party.**<br>Displays a counter badge on the party list for each party member who uses Provoke. Resets per zone. Toggle with /provokecounter, reset with /provokecounter reset. | [Repo](https://github.com/Valiice/ProvokeCounter) |
 | **EmoteReactor** | **React with an emote when someone emotes at you**<br>Define rules: when a player targets you and performs an emote, automatically perform an emote back. | [Repo](https://github.com/Valiice/EmoteReactor) |
+| **RaceFilter** | **Hide and mute players by race and gender.**<br>Rule-based filtering: hide models, suppress chat, and mute voices/footsteps of players by race and/or gender. Friends, party, alliance, and FC members are exempt. Pauses automatically in duties. | [Repo](https://github.com/Valiice/RaceFilter) |
 <!--END_MARKER-->
 ---
 

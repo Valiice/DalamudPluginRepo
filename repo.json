@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.17.3/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.17.3/SpotifyHonorific.zip",
-    "DownloadCount": 13223,
+    "DownloadCount": 13244,
     "LastUpdate": 1784768507
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 8937,
+    "DownloadCount": 8949,
     "LastUpdate": 1777552378
   },
   {
@@ -261,7 +261,7 @@
     "Name": "RaceFilter",
     "InternalName": "RaceFilter",
     "AssemblyVersion": "1.0.0.0",
-    "Description": "Rule-based filtering: hide models, suppress chat, and mute voices/footsteps of players by race and/or gender. Friends and FC members can be exempt; party and alliance members always stay visible.",
+    "Description": "Rule-based filtering: hide models, suppress chat, and mute voices/footsteps of players by race and/or gender. Friends, party, alliance, and FC members are exempt. Pauses automatically in duties.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/RaceFilter",
     "Tags": [
@@ -284,6 +284,6 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1784959825,
     "ImageUrls": [],
-    "DownloadCount": 0
+    "DownloadCount": 1
   }
 ]
