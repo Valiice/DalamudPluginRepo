@@ -255,5 +255,35 @@
     "LastUpdate": 1783144150,
     "ImageUrls": [],
     "DownloadCount": 26
+  },
+  {
+    "Author": "Vali",
+    "Name": "RaceFilter",
+    "InternalName": "RaceFilter",
+    "AssemblyVersion": "1.0.0.0",
+    "Description": "Rule-based filtering: hide models, suppress chat, and mute voices/footsteps of players by race and/or gender. Friends and FC members can be exempt; party and alliance members always stay visible.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Valiice/RaceFilter",
+    "Tags": [
+      "visibility",
+      "filter",
+      "hide"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "Hide and mute players by race and gender.",
+    "Changelog": "- Add build and release GitHub Actions workflows\n- Add Ko-fi support button to config window\n- Expand README to house style and add AGPL license\n- Prevent duplicate race+gender rules in the config UI\n- Replace em dashes with plain punctuation in strings and comments\n- Add clarifying tooltips to all config checkboxes\n- Protect party and alliance members, allow muting them everywhere\n- Harden plugin lifecycle and fix code-review findings\n- Add rules table config window and README\n- Add per-character audio muting for voice lines and footsteps\n- Add race-aware chat filter with cache fallback for remote senders\n- Add per-frame visibility enforcer with race cache feeding\n- Add services, configuration with default Lalafell rule, and plugin shell\n- Add LRU-capped RaceCache with export/seed round-trip\n- Add rule model and RuleEngine with union semantics\n- Scaffold RaceFilter solution with Core, plugin, and test projects",
+    "DownloadLinkInstall": "https://github.com/Valiice/RaceFilter/releases/download/v1.0.0/RaceFilter.zip",
+    "DownloadLinkTesting": "https://github.com/Valiice/RaceFilter/releases/download/v1.0.0/RaceFilter.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/RaceFilter/releases/download/v1.0.0/RaceFilter.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "AcceptsFeedback": false,
+    "LastUpdate": 1784959825,
+    "ImageUrls": [],
+    "DownloadCount": 0
   }
 ]
