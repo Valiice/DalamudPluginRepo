@@ -291,7 +291,7 @@
     "Name": "PlatePeek",
     "InternalName": "PlatePeek",
     "AssemblyVersion": "1.0.0.0",
-    "Description": "Opens an inspector beside any adventurer plate you view, showing every design layer, portrait setting (pose, camera, lighting, expression), gear, and profile value — with unlock status for your character. Export the portrait as a Portrait Helper-compatible preset or import it straight into your own portrait editor.",
+    "Description": "Opens an inspector beside any adventurer plate you view, showing every design layer, portrait setting (pose, camera, lighting, expression), gear, and profile value, with unlock status for your character. Export the portrait as a Portrait Helper compatible preset or import it straight into your own portrait editor.",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/PlatePeek",
     "Tags": [
