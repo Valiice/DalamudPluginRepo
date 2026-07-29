@@ -15,6 +15,7 @@ This is a custom plugin repository for **Dalamud**, the plugin framework for Fin
 | **ProvokeCounter** | **Counts how many times tanks provoke in your party.**<br>Displays a counter badge on the party list for each party member who uses Provoke. Resets per zone. Toggle with /provokecounter, reset with /provokecounter reset. | [Repo](https://github.com/Valiice/ProvokeCounter) |
 | **EmoteReactor** | **React with an emote when someone emotes at you**<br>Define rules: when a player targets you and performs an emote, automatically perform an emote back. | [Repo](https://github.com/Valiice/EmoteReactor) |
 | **RaceFilter** | **Hide and mute players by race and gender.**<br>Rule-based filtering: hide models, suppress chat, and mute voices/footsteps of players by race and/or gender. Friends, party, alliance, and FC members are exempt. Pauses automatically in duties. | [Repo](https://github.com/Valiice/RaceFilter) |
+| **PlatePeek** | **See exactly how any adventurer plate was made.**<br>Opens an inspector beside any adventurer plate you view, showing every design layer, portrait setting (pose, camera, lighting, expression), gear, and profile value, with unlock status for your character. Export the portrait as a Portrait Helper compatible preset or import it straight into your own portrait editor. | [Repo](https://github.com/Valiice/PlatePeek) |
 <!--END_MARKER-->
 ---
 
