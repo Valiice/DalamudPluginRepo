@@ -285,5 +285,36 @@
     "LastUpdate": 1784959825,
     "ImageUrls": [],
     "DownloadCount": 2
+  },
+  {
+    "Author": "Vali",
+    "Name": "PlatePeek",
+    "InternalName": "PlatePeek",
+    "AssemblyVersion": "1.0.0.0",
+    "Description": "Opens an inspector beside any adventurer plate you view, showing every design layer, portrait setting (pose, camera, lighting, expression), gear, and profile value — with unlock status for your character. Export the portrait as a Portrait Helper-compatible preset or import it straight into your own portrait editor.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Valiice/PlatePeek",
+    "Tags": [
+      "adventurer plate",
+      "portrait",
+      "inspector",
+      "copy"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "See exactly how any adventurer plate was made.",
+    "Changelog": "- Add PlatePeek: inspect and copy adventurer plates",
+    "ImageUrls": [],
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
+    "DownloadCount": 0,
+    "LastUpdate": 1785339337
   }
 ]
