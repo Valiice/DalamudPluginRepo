@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.17.4/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.17.4/SpotifyHonorific.zip",
-    "DownloadCount": 14476,
+    "DownloadCount": 14491,
     "LastUpdate": 1785824349
   },
   {
@@ -92,7 +92,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.2.0/DiscordChatWebhook.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.2.0/DiscordChatWebhook.zip",
-    "DownloadCount": 140,
+    "DownloadCount": 141,
     "LastUpdate": 1777889033
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 9588,
+    "DownloadCount": 9600,
     "LastUpdate": 1777552378
   },
   {
@@ -157,7 +157,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.0/RetainerInventoryPrice.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.0/RetainerInventoryPrice.zip",
-    "DownloadCount": 106,
+    "DownloadCount": 107,
     "LastUpdate": 1778183762
   },
   {
@@ -191,7 +191,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.4.2/FoxyJumpscare.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.4.2/FoxyJumpscare.zip",
-    "DownloadCount": 117,
+    "DownloadCount": 118,
     "LastUpdate": 1778183802
   },
   {
@@ -254,7 +254,7 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1783144150,
     "ImageUrls": [],
-    "DownloadCount": 36
+    "DownloadCount": 37
   },
   {
     "Author": "Vali",
@@ -314,7 +314,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
-    "DownloadCount": 25,
+    "DownloadCount": 26,
     "LastUpdate": 1785340995
   }
 ]
