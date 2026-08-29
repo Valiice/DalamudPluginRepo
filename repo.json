@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.17.4/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.17.4/SpotifyHonorific.zip",
-    "DownloadCount": 14883,
+    "DownloadCount": 14895,
     "LastUpdate": 1785824349
   },
   {
@@ -61,7 +61,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/LootTracker/releases/download/v1.0.0/DropLogger.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/LootTracker/releases/download/v1.0.0/DropLogger.zip",
-    "DownloadCount": 8,
+    "DownloadCount": 10,
     "LastUpdate": 1763714462
   },
   {
@@ -92,7 +92,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.2.0/DiscordChatWebhook.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/DiscordChatWebhook/releases/download/v1.2.0/DiscordChatWebhook.zip",
-    "DownloadCount": 152,
+    "DownloadCount": 154,
     "LastUpdate": 1777889033
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 10105,
+    "DownloadCount": 10118,
     "LastUpdate": 1777552378
   },
   {
@@ -157,7 +157,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.0/RetainerInventoryPrice.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.0/RetainerInventoryPrice.zip",
-    "DownloadCount": 111,
+    "DownloadCount": 112,
     "LastUpdate": 1778183762
   },
   {
@@ -191,7 +191,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.4.2/FoxyJumpscare.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/FoxyJumpscare/releases/download/v1.4.2/FoxyJumpscare.zip",
-    "DownloadCount": 127,
+    "DownloadCount": 129,
     "LastUpdate": 1778183802
   },
   {
@@ -254,7 +254,7 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1783144150,
     "ImageUrls": [],
-    "DownloadCount": 64
+    "DownloadCount": 66
   },
   {
     "Author": "Vali",
@@ -284,7 +284,7 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1785389949,
     "ImageUrls": [],
-    "DownloadCount": 13
+    "DownloadCount": 14
   },
   {
     "Author": "Vali",
@@ -314,7 +314,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
-    "DownloadCount": 38,
+    "DownloadCount": 40,
     "LastUpdate": 1785340995
   }
 ]
