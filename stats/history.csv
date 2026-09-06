@@ -463,3 +463,5 @@ timestamp,plugin,tag,published,downloads
 2026-09-05T14:36:53Z,RetainerInventoryPrice,v1.2.0,2026-05-07T19:56:02Z,79
 2026-09-05T19:57:14Z,SpotifyHonorific,v1.18.0,2026-09-03T12:31:38Z,653
 2026-09-06T03:00:52Z,SpotifyHonorific,v1.18.0,2026-09-03T12:31:38Z,694
+2026-09-06T10:17:21Z,SpotifyHonorific,v1.18.0,2026-09-03T12:31:38Z,728
+2026-09-06T10:17:21Z,DiscordChatWebhook,v1.2.0,2026-05-04T10:03:53Z,134
