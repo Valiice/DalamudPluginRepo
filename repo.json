@@ -316,5 +316,36 @@
     "DownloadLinkUpdate": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
     "DownloadCount": 83,
     "LastUpdate": 1785340995
+  },
+  {
+    "Author": "Vali",
+    "Name": "Culprit",
+    "InternalName": "Culprit",
+    "AssemblyVersion": "1.0.0.0",
+    "Description": "Watches every other plugin's draw and update time and error output. When one of them stalls a frame, eats frame time steadily, or throws repeatedly, Culprit names it in a notification so you know which plugin to look at.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Valiice/Culprit",
+    "Tags": [
+      "performance",
+      "stutter",
+      "diagnostics",
+      "watchdog"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "Finds the plugin behind your stutter.",
+    "Changelog": "- Add Culprit: names the plugin behind stutters and error spam",
+    "ImageUrls": [],
+    "AcceptsFeedback": false,
+    "DownloadLinkInstall": "https://github.com/Valiice/Culprit/releases/download/v1.0.0/Culprit.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/Valiice/Culprit/releases/download/v1.0.0/Culprit.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/Culprit/releases/download/v1.0.0/Culprit.zip",
+    "DownloadCount": 0,
+    "LastUpdate": 1790812937
   }
 ]
