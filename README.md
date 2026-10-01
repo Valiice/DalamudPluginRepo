@@ -16,6 +16,7 @@ This is a custom plugin repository for **Dalamud**, the plugin framework for Fin
 | **EmoteReactor** | **React with an emote when someone emotes at you**<br>Define rules: when a player targets you and performs an emote, automatically perform an emote back. | [Repo](https://github.com/Valiice/EmoteReactor) |
 | **RaceFilter** | **Hide and mute players by race and gender.**<br>Rule-based filtering: hide models, suppress chat, and mute voices/footsteps of players by race and/or gender. Friends, party, alliance, and FC members are exempt. Pauses automatically in duties. | [Repo](https://github.com/Valiice/RaceFilter) |
 | **PlatePeek** | **See exactly how any adventurer plate was made.**<br>Opens an inspector beside any adventurer plate you view, showing every design layer, portrait setting (pose, camera, lighting, expression), gear, and profile value, with unlock status for your character. Export the portrait as a Portrait Helper compatible preset or import it straight into your own portrait editor. | [Repo](https://github.com/Valiice/PlatePeek) |
+| **Culprit** | **Finds the plugin behind your stutter.**<br>Watches every other plugin's draw and update time and error output. When one of them stalls a frame, eats frame time steadily, or throws repeatedly, Culprit names it in a notification so you know which plugin to look at. | [Repo](https://github.com/Valiice/Culprit) |
 <!--END_MARKER-->
 ---
 
