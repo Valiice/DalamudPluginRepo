@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.18.1/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.18.1/SpotifyHonorific.zip",
-    "DownloadCount": 17577,
+    "DownloadCount": 17583,
     "LastUpdate": 1790330497
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 11346,
+    "DownloadCount": 11352,
     "LastUpdate": 1777552378
   },
   {
@@ -157,7 +157,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.2/RetainerInventoryPrice.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.2/RetainerInventoryPrice.zip",
-    "DownloadCount": 170,
+    "DownloadCount": 171,
     "LastUpdate": 1790330480
   },
   {
@@ -224,7 +224,7 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1777668768,
     "ImageUrls": [],
-    "DownloadCount": 77
+    "DownloadCount": 78
   },
   {
     "Author": "Vali",
@@ -314,7 +314,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
-    "DownloadCount": 107,
+    "DownloadCount": 108,
     "LastUpdate": 1785340995
   },
   {
@@ -345,7 +345,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/Culprit/releases/download/v1.0.0/Culprit.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/Culprit/releases/download/v1.0.0/Culprit.zip",
-    "DownloadCount": 43,
+    "DownloadCount": 45,
     "LastUpdate": 1790812937
   }
 ]
