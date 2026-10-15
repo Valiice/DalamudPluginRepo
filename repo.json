@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.18.2/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.18.2/SpotifyHonorific.zip",
-    "DownloadCount": 18306,
+    "DownloadCount": 18371,
     "LastUpdate": 1791890123
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 11456,
+    "DownloadCount": 11464,
     "LastUpdate": 1777552378
   },
   {
@@ -157,7 +157,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.2/RetainerInventoryPrice.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.2/RetainerInventoryPrice.zip",
-    "DownloadCount": 174,
+    "DownloadCount": 177,
     "LastUpdate": 1790330480
   },
   {
@@ -224,7 +224,7 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1777668768,
     "ImageUrls": [],
-    "DownloadCount": 82
+    "DownloadCount": 83
   },
   {
     "Author": "Vali",
@@ -284,7 +284,7 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1785389949,
     "ImageUrls": [],
-    "DownloadCount": 62
+    "DownloadCount": 64
   },
   {
     "Author": "Vali",
@@ -314,7 +314,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/PlatePeek/releases/download/v1.0.0/PlatePeek.zip",
-    "DownloadCount": 116,
+    "DownloadCount": 117,
     "LastUpdate": 1785340995
   },
   {
@@ -345,7 +345,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/Culprit/releases/download/v1.0.0/Culprit.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/Culprit/releases/download/v1.0.0/Culprit.zip",
-    "DownloadCount": 65,
+    "DownloadCount": 66,
     "LastUpdate": 1790812937
   },
   {
@@ -375,7 +375,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/Chaperone/releases/download/v1.0.0/Chaperone.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/Chaperone/releases/download/v1.0.0/Chaperone.zip",
-    "DownloadCount": 12,
+    "DownloadCount": 14,
     "LastUpdate": 1791587923
   }
 ]
