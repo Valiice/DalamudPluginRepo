@@ -409,5 +409,36 @@
     "DownloadLinkUpdate": "https://github.com/Valiice/MitRecap/releases/download/v1.0.1/MitRecap.zip",
     "DownloadCount": 9,
     "LastUpdate": 1795061393
+  },
+  {
+    "Author": "Vali",
+    "Name": "Report Helper",
+    "InternalName": "ReportHelper",
+    "AssemblyVersion": "1.0.0.0",
+    "Description": "Opens next to the game's report form. Lists the players you were recently in a party or alliance with or who talked near you, shows what they said, and builds the report text from a template that you copy and paste into the form. Nothing is sent or submitted for you. Open by hand with /reporthelper.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Valiice/ReportHelper",
+    "Tags": [
+      "report",
+      "harassment",
+      "chat",
+      "party"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "Write harassment reports without the hassle.",
+    "Changelog": "- First release",
+    "ImageUrls": [],
+    "AcceptsFeedback": true,
+    "DownloadLinkInstall": "https://github.com/Valiice/ReportHelper/releases/download/v1.0.0/ReportHelper.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/Valiice/ReportHelper/releases/download/v1.0.0/ReportHelper.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/ReportHelper/releases/download/v1.0.0/ReportHelper.zip",
+    "DownloadCount": 0,
+    "LastUpdate": 1795106448
   }
 ]
