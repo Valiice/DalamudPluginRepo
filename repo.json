@@ -377,5 +377,37 @@
     "DownloadLinkUpdate": "https://github.com/Valiice/Chaperone/releases/download/v1.0.0/Chaperone.zip",
     "DownloadCount": 37,
     "LastUpdate": 1791587923
+  },
+  {
+    "Author": "Vali",
+    "Name": "Mit Recap",
+    "InternalName": "MitRecap",
+    "AssemblyVersion": "1.0.0.0",
+    "Description": "Records every mitigation and heal your party uses during a duty. Right-click a party member in a duty and pick Mit Recap, or type /mitrecap, to see what they pressed and when, pull by pull. Looks and reads like Death Recap, but covers the whole duty and not only deaths.",
+    "ApplicableVersion": "any",
+    "RepoUrl": "https://github.com/Valiice/MitRecap",
+    "Tags": [
+      "combat",
+      "mitigation",
+      "healing",
+      "recap",
+      "party"
+    ],
+    "DalamudApiLevel": 15,
+    "LoadRequiredState": 0,
+    "LoadSync": false,
+    "CanUnloadAsync": false,
+    "LoadPriority": 0,
+    "Punchline": "See when your tanks and healers pressed their mitigations and heals.",
+    "Changelog": "- Add Mit Recap: see which mitigations and heals your party pressed, pull by pull",
+    "ImageUrls": [],
+    "AcceptsFeedback": true,
+    "DownloadLinkInstall": "https://github.com/Valiice/MitRecap/releases/download/v1.0.0/MitRecap.zip",
+    "IsHide": false,
+    "IsTestingExclusive": false,
+    "DownloadLinkTesting": "https://github.com/Valiice/MitRecap/releases/download/v1.0.0/MitRecap.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/MitRecap/releases/download/v1.0.0/MitRecap.zip",
+    "DownloadCount": 0,
+    "LastUpdate": 1795053841
   }
 ]
