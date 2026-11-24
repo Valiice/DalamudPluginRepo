@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.18.2/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.18.2/SpotifyHonorific.zip",
-    "DownloadCount": 19444,
+    "DownloadCount": 19448,
     "LastUpdate": 1791890123
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 12389,
+    "DownloadCount": 12399,
     "LastUpdate": 1777552378
   },
   {
@@ -157,7 +157,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.2/RetainerInventoryPrice.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/RetainerInventoryPrice/releases/download/v1.2.2/RetainerInventoryPrice.zip",
-    "DownloadCount": 200,
+    "DownloadCount": 201,
     "LastUpdate": 1790330480
   },
   {
@@ -254,7 +254,7 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1783144150,
     "ImageUrls": [],
-    "DownloadCount": 209
+    "DownloadCount": 210
   },
   {
     "Author": "Vali",
@@ -284,7 +284,7 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1785389949,
     "ImageUrls": [],
-    "DownloadCount": 90
+    "DownloadCount": 92
   },
   {
     "Author": "Vali",
@@ -345,7 +345,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/Culprit/releases/download/v1.0.0/Culprit.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/Culprit/releases/download/v1.0.0/Culprit.zip",
-    "DownloadCount": 149,
+    "DownloadCount": 150,
     "LastUpdate": 1790812937
   },
   {
@@ -469,7 +469,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SmartExpertDelivery/releases/download/v1.0.0/SmartExpertDelivery.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SmartExpertDelivery/releases/download/v1.0.0/SmartExpertDelivery.zip",
-    "DownloadCount": 0,
-    "LastUpdate": 1795503070
+    "DownloadCount": 3,
+    "LastUpdate": 1795503052
   }
 ]
