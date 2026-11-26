@@ -445,7 +445,7 @@
     "Author": "Vali",
     "Name": "Smart Expert Delivery",
     "InternalName": "SmartExpertDelivery",
-    "AssemblyVersion": "1.0.0.0",
+    "AssemblyVersion": "1.1.0.0",
     "Description": "Adds a Deliver button to the Grand Company Expert Delivery window. It hands in your gear but keeps what a lower level job can still use, and optionally tomestone gear, melded gear and gear set pieces. Settings: /sed",
     "ApplicableVersion": "any",
     "RepoUrl": "https://github.com/Valiice/SmartExpertDelivery",
@@ -461,15 +461,15 @@
     "CanUnloadAsync": false,
     "LoadPriority": 0,
     "Punchline": "Expert delivery that keeps the gear you still need.",
-    "Changelog": "- First release",
+    "Changelog": "- Add option to show the Deliver button on the right",
     "ImageUrls": [],
     "AcceptsFeedback": true,
-    "DownloadLinkInstall": "https://github.com/Valiice/SmartExpertDelivery/releases/download/v1.0.0/SmartExpertDelivery.zip",
+    "DownloadLinkInstall": "https://github.com/Valiice/SmartExpertDelivery/releases/download/v1.1.0/SmartExpertDelivery.zip",
     "IsHide": false,
     "IsTestingExclusive": false,
-    "DownloadLinkTesting": "https://github.com/Valiice/SmartExpertDelivery/releases/download/v1.0.0/SmartExpertDelivery.zip",
-    "DownloadLinkUpdate": "https://github.com/Valiice/SmartExpertDelivery/releases/download/v1.0.0/SmartExpertDelivery.zip",
+    "DownloadLinkTesting": "https://github.com/Valiice/SmartExpertDelivery/releases/download/v1.1.0/SmartExpertDelivery.zip",
+    "DownloadLinkUpdate": "https://github.com/Valiice/SmartExpertDelivery/releases/download/v1.1.0/SmartExpertDelivery.zip",
     "DownloadCount": 5,
-    "LastUpdate": 1795503052
+    "LastUpdate": 1795671477
   }
 ]
