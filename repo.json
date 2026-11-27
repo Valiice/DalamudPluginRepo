@@ -31,7 +31,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.18.2/SpotifyHonorific.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SpotifyHonorific/releases/download/v1.18.2/SpotifyHonorific.zip",
-    "DownloadCount": 19483,
+    "DownloadCount": 19490,
     "LastUpdate": 1791890123
   },
   {
@@ -124,7 +124,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/JobAutoSwitcher/releases/download/v1.3.1/JobAutoSwitcher.zip",
-    "DownloadCount": 12431,
+    "DownloadCount": 12441,
     "LastUpdate": 1777552378
   },
   {
@@ -224,7 +224,7 @@
     "AcceptsFeedback": false,
     "LastUpdate": 1795647588,
     "ImageUrls": [],
-    "DownloadCount": 108
+    "DownloadCount": 111
   },
   {
     "Author": "Vali",
@@ -314,7 +314,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/PlatePeek/releases/download/v1.2.0/PlatePeek.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/PlatePeek/releases/download/v1.2.0/PlatePeek.zip",
-    "DownloadCount": 284,
+    "DownloadCount": 285,
     "LastUpdate": 1794682502
   },
   {
@@ -407,7 +407,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/MitRecap/releases/download/v1.1.0/MitRecap.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/MitRecap/releases/download/v1.1.0/MitRecap.zip",
-    "DownloadCount": 26,
+    "DownloadCount": 27,
     "LastUpdate": 1795134803
   },
   {
@@ -438,7 +438,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/ReportHelper/releases/download/v1.0.0/ReportHelper.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/ReportHelper/releases/download/v1.0.0/ReportHelper.zip",
-    "DownloadCount": 14,
+    "DownloadCount": 16,
     "LastUpdate": 1795106430
   },
   {
@@ -469,7 +469,7 @@
     "IsTestingExclusive": false,
     "DownloadLinkTesting": "https://github.com/Valiice/SmartExpertDelivery/releases/download/v1.2.0/SmartExpertDelivery.zip",
     "DownloadLinkUpdate": "https://github.com/Valiice/SmartExpertDelivery/releases/download/v1.2.0/SmartExpertDelivery.zip",
-    "DownloadCount": 10,
-    "LastUpdate": 1795739569
+    "DownloadCount": 13,
+    "LastUpdate": 1795739526
   }
 ]
